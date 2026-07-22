@@ -1,0 +1,229 @@
+<ion-content [fullscreen]="true">
+  <main class="aprende-screen">
+
+    <header class="topbar">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/informacion"
+        (click)="registrarAccion('volver_informacion', 'informacion')">
+        <ion-icon name="chevron-back"></ion-icon>
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button
+        type="button"
+        class="sos-btn"
+        routerLink="/denuncia"
+        (click)="registrarAccion('sos_denuncia', 'denuncia')">
+        {{ t.sos }}
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
+          ES
+        </button>
+
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <section class="hero-card">
+        <div>
+          <span class="hero-tag">{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-icon">
+          <ion-icon name="book"></ion-icon>
+        </div>
+      </section>
+
+      <!-- ¿QUÉ ES TRATA DE PERSONAS? -->
+      <section class="info-card main-info enhanced-info-card">
+        <div class="card-decor dots"></div>
+        <div class="card-decor glow"></div>
+
+        <div class="section-title enhanced-title">
+          <span class="section-icon blue info-icon-animated">
+            <ion-icon name="help-circle"></ion-icon>
+          </span>
+
+          <div class="title-wrap">
+            <small class="mini-label">
+              {{ idioma.isEs() ? 'CONCEPTO CLAVE' : 'KEY CONCEPT' }}
+            </small>
+
+            <h3>{{ t.queEsTitulo }}</h3>
+          </div>
+        </div>
+
+        <div class="info-text-box">
+          <p>
+            {{ t.queEsTexto }}
+          </p>
+        </div>
+      </section>
+
+      <!-- MÉTODOS DE CAPTACIÓN -->
+      <section class="info-card methods-card">
+        <div class="section-title methods-title">
+          <span class="section-icon cyan methods-icon-main">
+            <ion-icon name="compass"></ion-icon>
+          </span>
+
+          <div>
+            <small class="methods-label">
+              {{ idioma.isEs() ? 'SEÑALES COMUNES' : 'COMMON SIGNS' }}
+            </small>
+
+            <h3>{{ t.metodosTitulo }}</h3>
+          </div>
+        </div>
+
+        <p class="method-intro">
+          {{ t.metodosIntro }}
+        </p>
+
+        <div class="method-list">
+          <div
+            class="method-item"
+            *ngFor="let item of t.metodosItems; let i = index"
+            [style.animation-delay.ms]="i * 90">
+
+            <span class="method-emoji">
+              {{ item.icono }}
+            </span>
+
+            <span class="method-text">
+              {{ item.texto }}
+            </span>
+          </div>
+        </div>
+
+        <div class="method-note">
+          <span>💡</span>
+
+          <p>
+            {{ t.metodosNota }}
+          </p>
+        </div>
+      </section>
+
+      <!-- IMPORTANTE EN POSITIVO -->
+      <section class="important-card">
+        <div class="section-title">
+          <span class="section-icon positive">
+            <ion-icon name="shield-checkmark"></ion-icon>
+          </span>
+
+          <h3>{{ t.importanteTitulo }}</h3>
+        </div>
+
+        <strong>
+          {{ t.importanteTextoUno }}
+        </strong>
+
+        <p>
+          {{ t.importanteTextoDos }}
+        </p>
+      </section>
+
+      <!-- RECUERDA -->
+      <section class="remember-card">
+        <div class="section-title">
+          <span class="section-icon yellow">
+            <ion-icon name="bulb"></ion-icon>
+          </span>
+
+          <h3>{{ t.recuerdaTitulo }}</h3>
+        </div>
+
+        <p>
+          {{ t.recuerdaTexto }}
+        </p>
+      </section>
+
+      <!-- VIDEOS SIEMPRE HASTA ABAJO -->
+      <button
+        type="button"
+        class="videos-bottom-card"
+        routerLink="/videos"
+        (click)="registrarAccion('ver_videos_desde_aprende_trata', 'videos')">
+
+        <div class="video-play-icon">
+          <span>▶</span>
+        </div>
+
+        <div class="video-info">
+          <small>
+            {{ t.videosEtiqueta }}
+          </small>
+
+          <h3>
+            {{ t.videosTitulo }}
+          </h3>
+
+          <p>
+            {{ t.videosTexto }}
+          </p>
+        </div>
+
+        <div class="video-arrow">
+          ›
+        </div>
+      </button>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
+        <b><ion-icon name="home"></ion-icon></b>
+        {{ t.inicio }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
+        <b><ion-icon name="alert-circle"></ion-icon></b>
+        {{ t.denunciaNav }}
+      </button>
+
+      <button
+        type="button"
+        class="active"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
+        <b><ion-icon name="book"></ion-icon></b>
+        {{ t.info }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
+        <b><ion-icon name="chatbubble-ellipses"></ion-icon></b>
+        {{ t.apoyo }}
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

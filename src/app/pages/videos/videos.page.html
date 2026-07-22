@@ -1,0 +1,92 @@
+<ion-content [fullscreen]="true">
+  <main class="videos-screen">
+    <header class="topbar">
+      <button class="back-btn" routerLink="/informacion">
+        <ion-icon name="chevron-back"></ion-icon>
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button class="sos-btn" routerLink="/denuncia">
+        SOS
+      </button>
+    </header>
+
+    <section class="content">
+      <div class="videos-lang-switch">
+        <button [class.active]="lang === 'es'" (click)="setLang('es')">
+          ES
+        </button>
+
+        <button [class.active]="lang === 'en'" (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <section class="hero-card">
+        <div>
+          <span class="hero-tag">{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-icon">
+          <ion-icon name="play-circle"></ion-icon>
+        </div>
+      </section>
+
+      <section class="notice-card">
+        <strong>{{ t.avisoTitulo }}</strong>
+        <span>{{ t.avisoTexto }}</span>
+      </section>
+
+      <section class="video-list">
+        <article class="video-card" *ngFor="let video of videos">
+          <div class="video-frame">
+            <iframe
+              [src]="video.embedUrl"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="video-info">
+            <h3>{{ video.titulo[lang] }}</h3>
+
+            <p>{{ video.descripcion[lang] }}</p>
+
+            <button (click)="abrirYoutube(video.youtubeUrl)">
+              {{ t.abrirYoutube }}
+            </button>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <nav class="bottom-nav">
+      <button routerLink="/inicio">
+        <b><ion-icon name="home"></ion-icon></b>
+        {{ t.inicio }}
+      </button>
+
+      <button routerLink="/denuncia">
+        <b><ion-icon name="alert-circle"></ion-icon></b>
+        {{ t.denunciaNav }}
+      </button>
+
+      <button class="active" routerLink="/informacion">
+        <b><ion-icon name="book"></ion-icon></b>
+        {{ t.info }}
+      </button>
+
+      <button routerLink="/apoyo">
+        <b><ion-icon name="chatbubble-ellipses"></ion-icon></b>
+        {{ t.apoyo }}
+      </button>
+    </nav>
+  </main>
+</ion-content>

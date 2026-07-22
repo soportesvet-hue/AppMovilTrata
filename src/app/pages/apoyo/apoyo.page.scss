@@ -1,0 +1,366 @@
+:host {
+  display: block;
+}
+
+ion-content {
+  --background: #eaf5ff;
+}
+
+.apoyo-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 94% 24%, rgba(255, 204, 51, 0.20) 0 76px, transparent 78px),
+    radial-gradient(circle at 0% 88%, rgba(65, 188, 235, 0.22) 0 115px, transparent 118px),
+    linear-gradient(180deg, #f4fbff 0%, #eaf5ff 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 76px;
+  background: #0d4ea6;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 54px 1fr 74px;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 14px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 900;
+  }
+}
+
+.back-btn,
+.exit-btn,
+.sos-btn {
+  border: 0;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.back-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.exit-btn {
+  height: 42px;
+  border-radius: 15px;
+  background: #ffd23c;
+  color: #0d4ea6;
+  font-size: 0.85rem;
+}
+
+/* BOTÓN SOS SUPERIOR */
+.topbar .sos-btn,
+.sos-btn {
+  border: 0 !important;
+  outline: none !important;
+  width: 58px !important;
+  height: 42px !important;
+  border-radius: 15px !important;
+  background: linear-gradient(135deg, #ff5f6d, #ff2e7a) !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  box-shadow: 0 10px 20px rgba(255, 47, 122, 0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  justify-self: end !important;
+  text-align: center !important;
+  padding: 0 !important;
+}
+
+.content {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 14px 14px 96px;
+}
+
+.lang-switch {
+  width: fit-content;
+  margin: 0 0 14px auto;
+  background: #6d94cc;
+  border-radius: 999px;
+  padding: 4px;
+  display: flex;
+  gap: 2px;
+
+  button {
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    min-width: 42px;
+    height: 32px;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.78rem;
+  }
+
+  .active {
+    background: #ffd23c;
+    color: #0d4ea6;
+  }
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1fr 82px;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 10px 24px rgba(13, 78, 166, 0.08);
+  margin-bottom: 14px;
+  border: 1px solid rgba(65, 188, 235, 0.24);
+}
+
+.hero-text {
+  span {
+    display: inline-block;
+    background: #f3e2a7;
+    color: #755d00;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin: 8px 0 6px;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #0d4ea6;
+    line-height: 1.1;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: #36506f;
+    font-weight: 700;
+  }
+}
+
+.hero-logo {
+  width: 82px;
+  height: 82px;
+  border-radius: 24px;
+  background: #f3f9ff;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(13, 78, 166, 0.12);
+
+  img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+}
+
+.support-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 10px 24px rgba(13, 78, 166, 0.08);
+  margin-bottom: 14px;
+  border-left: 7px solid #41bceb;
+}
+
+.logo-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+  background: #f3f9ff;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(13, 78, 166, 0.12);
+
+  img {
+    width: 66px;
+    height: 66px;
+    object-fit: contain;
+  }
+}
+
+.support-info {
+  min-width: 0;
+
+  h3 {
+    margin: 7px 0 6px;
+    color: #0d4ea6;
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0 0 11px;
+    color: #36506f;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(65, 188, 235, 0.18);
+  color: #205183;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.whatsapp-btn {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #20b486, #41bceb);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 10px 20px rgba(32, 180, 134, 0.20);
+}
+
+.web-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(13, 78, 166, 0.08);
+  margin-bottom: 14px;
+  border-left: 7px solid #bad532;
+}
+
+.web-info {
+  width: 100%;
+
+  h3 {
+    margin: 8px 0 8px;
+    color: #205183;
+    font-size: 1.35rem;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: #36506f;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+}
+
+.web-tag {
+  background: rgba(186, 213, 50, 0.22);
+  color: #205183;
+}
+
+.web-btn {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 14px;
+  background: #205183;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  background: #ffffff;
+  border-top: 1px solid #d9e3f0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 8px 4px calc(8px + env(safe-area-inset-bottom));
+
+  button {
+    border: 0;
+    background: transparent;
+    color: #6d7d94;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 6px 0;
+
+    b {
+      width: 28px;
+      height: 28px;
+      border: 2px solid currentColor;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+  }
+
+  .active {
+    color: #0d4ea6;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-card {
+    grid-template-columns: 1fr 70px;
+  }
+
+  .hero-logo {
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .support-card {
+    grid-template-columns: 66px 1fr;
+    padding: 14px;
+  }
+
+  .logo-box {
+    width: 66px;
+    height: 66px;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  .support-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .whatsapp-btn {
+    font-size: 0.92rem;
+  }
+}

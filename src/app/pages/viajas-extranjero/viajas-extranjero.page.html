@@ -1,0 +1,121 @@
+<ion-content [fullscreen]="true">
+  <main class="viajas-screen">
+
+    <header class="topbar">
+      <button class="back-btn" routerLink="/informacion">
+        <ion-icon name="chevron-back"></ion-icon>
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button class="sos-btn" routerLink="/denuncia">
+        {{ t.sos }}
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button [class.active]="lang === 'es'" (click)="setLang('es')">
+          ES
+        </button>
+
+        <button [class.active]="lang === 'en'" (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <!-- HERO -->
+      <section class="hero-card">
+        <div>
+          <span class="hero-tag">{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-icon plane-icon">
+          <span class="plane-trail trail-one"></span>
+          <span class="plane-trail trail-two"></span>
+
+          <ion-icon name="airplane" class="plane-animated"></ion-icon>
+        </div>
+      </section>
+
+      <!-- CONSULADOS -->
+      <section class="consulados-card">
+        <div class="section-title">
+          <span class="section-icon cyan">
+            <ion-icon name="business"></ion-icon>
+          </span>
+
+          <h3>{{ t.consuladosTitulo }}</h3>
+        </div>
+
+        <p>
+          {{ t.consuladosTexto }}
+        </p>
+
+        <button class="consulados-btn" routerLink="/consulados-guatemala">
+          {{ t.consuladosBoton }}
+        </button>
+      </section>
+
+      <!-- CONSEJOS -->
+      <section class="tips-card">
+        <div class="section-title">
+          <span class="section-icon blue">
+            <ion-icon name="bag-handle"></ion-icon>
+          </span>
+
+          <h3>{{ t.consejosTitulo }}</h3>
+        </div>
+
+        <p class="tips-intro">
+          {{ t.consejosIntro }}
+        </p>
+
+        <div class="tips-list">
+          <article
+            class="tip-item"
+            *ngFor="let item of t.consejosItems; let i = index"
+            [style.animation-delay.ms]="i * 80">
+
+            <span class="tip-number">
+              {{ i + 1 }}
+            </span>
+
+            <p>
+              {{ item }}
+            </p>
+          </article>
+        </div>
+      </section>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button routerLink="/inicio">
+        <b><ion-icon name="home"></ion-icon></b>
+        {{ t.inicio }}
+      </button>
+
+      <button routerLink="/denuncia">
+        <b><ion-icon name="alert-circle"></ion-icon></b>
+        {{ t.denunciaNav }}
+      </button>
+
+      <button class="active" routerLink="/informacion">
+        <b><ion-icon name="book"></ion-icon></b>
+        {{ t.info }}
+      </button>
+
+      <button routerLink="/apoyo">
+        <b><ion-icon name="chatbubble-ellipses"></ion-icon></b>
+        {{ t.apoyo }}
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

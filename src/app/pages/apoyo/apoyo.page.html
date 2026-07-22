@@ -1,0 +1,132 @@
+<ion-content [fullscreen]="true">
+  <main class="apoyo-screen">
+
+    <header class="topbar">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/inicio"
+        (click)="registrarAccion('volver_inicio', 'inicio')">
+        ‹
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button
+        type="button"
+        class="sos-btn"
+        routerLink="/denuncia"
+        (click)="registrarAccion('sos_denuncia', 'denuncia')">
+        SOS
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
+          ES
+        </button>
+
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <section class="hero-card">
+        <div class="hero-text">
+          <span>{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-logo">
+          <img src="assets/img/olivet.png" alt="OLIVET">
+        </div>
+      </section>
+
+      <section class="support-card">
+        <div class="logo-box">
+          <img src="assets/img/olivet.png" alt="OLIVET">
+        </div>
+
+        <div class="support-info">
+          <span class="tag">WHATSAPP</span>
+
+          <h3>{{ t.whatsappTitulo }}</h3>
+
+          <p>{{ t.whatsappTexto }}</p>
+
+          <button
+            type="button"
+            class="whatsapp-btn"
+            (click)="abrirWhatsApp()">
+            {{ t.whatsappBoton }}
+          </button>
+        </div>
+      </section>
+
+      <section class="web-card">
+        <div class="web-info">
+          <span class="tag web-tag">WEB</span>
+
+          <h3>{{ t.webTitulo }}</h3>
+
+          <p>{{ t.webTexto }}</p>
+
+          <button
+            type="button"
+            class="web-btn"
+            (click)="abrirModoDigital()">
+            {{ t.webBoton }}
+          </button>
+        </div>
+      </section>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
+        <b>⌂</b>
+        {{ t.inicio }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
+        <b>!</b>
+        {{ t.denunciaNav }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
+        <b>i</b>
+        {{ t.info }}
+      </button>
+
+      <button
+        type="button"
+        class="active"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
+        <b>A</b>
+        {{ t.apoyo }}
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

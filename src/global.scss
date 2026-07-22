@@ -1,0 +1,97 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+/* RESPONSIVE PARA TABLET */
+@media (min-width: 700px) {
+  main[class*="-screen"] {
+    width: 100% !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+  }
+
+  main[class*="-screen"] .content {
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  main[class*="-screen"] .topbar {
+    width: 100% !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+  }
+
+  main[class*="-screen"] .bottom-nav {
+    width: 100% !important;
+    max-width: 760px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .hero-card,
+  .quick-card,
+  .info-card,
+  .recommend-card,
+  .safety-card,
+  .tourism-card,
+  .turista-card,
+  .contact-card,
+  .support-card,
+  .web-card,
+  .privacy-card,
+  .list-card {
+    max-width: 100% !important;
+  }
+}
+
+/* TABLETS GRANDES */
+@media (min-width: 1000px) {
+  main[class*="-screen"] {
+    max-width: 860px !important;
+  }
+
+  main[class*="-screen"] .content {
+    max-width: 800px !important;
+  }
+
+  main[class*="-screen"] .topbar,
+  main[class*="-screen"] .bottom-nav {
+    max-width: 860px !important;
+  }
+}

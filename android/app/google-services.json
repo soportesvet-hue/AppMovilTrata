@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1066623449975",
+    "project_id": "svet-3266c",
+    "storage_bucket": "svet-3266c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066623449975:android:16f700ba08650f06ea3f72",
+        "android_client_info": {
+          "package_name": "gt.gob.svet.orientacion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCGvUp8qntEZAz-xWg3nqXbMUPo_7tjwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

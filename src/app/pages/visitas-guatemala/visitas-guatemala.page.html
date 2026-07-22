@@ -1,0 +1,270 @@
+<ion-content [fullscreen]="true">
+  <main class="visitas-screen">
+
+    <header class="topbar">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/informacion"
+        (click)="registrarAccion('volver_informacion', 'informacion')">
+        ‹
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button
+        type="button"
+        class="sos-btn"
+        routerLink="/denuncia"
+        (click)="registrarAccion('sos_denuncia', 'denuncia')">
+        SOS
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
+          ES
+        </button>
+
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <!-- HERO PRINCIPAL CON MARIMBA -->
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="hero-tag">{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-icon marimba-icon">
+          <div class="marimba-glow"></div>
+          <div class="marimba-ring"></div>
+
+          <svg class="marimba-svg" viewBox="0 0 120 120" aria-hidden="true">
+            <path
+              class="marimba-volcano"
+              d="M12 92 C28 64, 43 58, 60 72 C76 55, 92 62, 108 92 Z" />
+
+            <path
+              class="marimba-leaf"
+              d="M82 28 C96 25, 104 34, 100 48 C88 47, 80 39, 82 28 Z" />
+
+            <rect class="marimba-base" x="24" y="51" width="72" height="16" rx="7" />
+
+            <path class="marimba-decoration" d="M30 58 H90" />
+
+            <rect class="bar bar-1" x="30" y="45" width="9" height="28" rx="3" />
+            <rect class="bar bar-2" x="43" y="42" width="10" height="32" rx="3" />
+            <rect class="bar bar-3" x="57" y="39" width="11" height="36" rx="3" />
+            <rect class="bar bar-4" x="72" y="42" width="10" height="32" rx="3" />
+            <rect class="bar bar-5" x="86" y="45" width="9" height="28" rx="3" />
+
+            <rect class="tube tube-1" x="32" y="73" width="5" height="18" rx="2" />
+            <rect class="tube tube-2" x="46" y="74" width="5" height="22" rx="2" />
+            <rect class="tube tube-3" x="61" y="75" width="5" height="25" rx="2" />
+            <rect class="tube tube-4" x="75" y="74" width="5" height="22" rx="2" />
+            <rect class="tube tube-5" x="88" y="73" width="5" height="18" rx="2" />
+
+            <line class="stick" x1="35" y1="36" x2="55" y2="52" />
+            <line class="stick" x1="86" y1="36" x2="66" y2="52" />
+
+            <circle class="mallet" cx="33" cy="34" r="6" />
+            <circle class="mallet" cx="88" cy="34" r="6" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- CONSULADOS ACREDITADOS -->
+      <button
+        type="button"
+        class="quick-card"
+        routerLink="/consulados-acreditados"
+        (click)="registrarAccion('ver_consulados_acreditados', 'consulados_acreditados')">
+
+        <div class="quick-icon blue">
+          🌐
+        </div>
+
+        <div class="quick-content">
+          <h3>{{ t.consuladosTitulo }}</h3>
+
+          <p>{{ t.consuladosTexto }}</p>
+
+          <span class="quick-link quick-action-btn">
+            {{ t.consuladosBoton }}
+          </span>
+        </div>
+      </button>
+
+      <!-- INFORMACIÓN GENERAL -->
+      <section class="info-card">
+        <div class="section-title">
+          <div class="section-icon blue-soft info-circle">
+            <ion-icon name="information-circle"></ion-icon>
+          </div>
+
+          <h3>{{ t.infoTitulo }}</h3>
+        </div>
+
+        <p>{{ t.infoTexto }}</p>
+      </section>
+
+      <!-- TURISMO SEGURO / ASISTUR -->
+      <section class="tourism-card asistur-card">
+        <div class="asistur-title">
+          <div class="asistur-mini-logo">
+            <img src="assets/img/asistur-azul.png" alt="ASISTUR">
+          </div>
+
+          <div class="asistur-title-text">
+            <span class="asistur-label">{{ t.etiqueta }}</span>
+
+            <h3>{{ t.turismoTitulo }}</h3>
+          </div>
+        </div>
+
+        <p>{{ t.turismoTexto }}</p>
+
+        <button
+          type="button"
+          (click)="abrirLink('https://inguat.gob.gt/asistur/', 'asistur_web')">
+          {{ t.turismoBoton }}
+        </button>
+      </section>
+
+      <!-- CONSEJOS -->
+      <section class="recommend-card">
+        <div class="section-title">
+          <div class="section-icon green">
+            ✓
+          </div>
+
+          <h3>{{ t.consejosTitulo }}</h3>
+        </div>
+
+        <p class="recommend-intro">{{ t.consejosIntro }}</p>
+
+        <div class="recommend-list">
+          <div
+            class="recommend-item"
+            *ngFor="let item of t.consejosItems; let i = index">
+
+            <div class="recommend-number">
+              {{ i + 1 }}
+            </div>
+
+            <p>{{ item }}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEGURIDAD -->
+      <section class="safety-card">
+        <div class="section-title">
+          <div class="section-icon shield">
+            🛡
+          </div>
+
+          <h3>{{ t.seguridadTitulo }}</h3>
+        </div>
+
+        <div class="safety-box">
+          <p>{{ t.seguridadTexto }}</p>
+        </div>
+
+        <div class="safety-box highlight">
+          <p>{{ t.seguridadAlerta }}</p>
+        </div>
+      </section>
+
+      <!-- ASISTENCIA AL TURISTA -->
+      <section class="turista-card">
+        <div class="turista-header">
+          <span class="turista-tag">{{ t.ayudaEtiqueta }}</span>
+
+          <div class="turista-number">
+            <span>Tel.</span>
+            1500
+          </div>
+        </div>
+
+        <h3>{{ t.ayudaTitulo }}</h3>
+
+        <p>{{ t.ayudaTexto }}</p>
+
+        <div class="turista-actions">
+          <button
+            type="button"
+            class="turista-btn btn-1500"
+            (click)="llamar('1500')">
+            {{ t.ayudaLlamarUno }}
+          </button>
+
+          <button
+            type="button"
+            class="turista-btn btn-2290"
+            (click)="llamar('22902810')">
+            {{ t.ayudaLlamarDos }}
+          </button>
+
+          <button
+            type="button"
+            class="turista-btn btn-whatsapp"
+            (click)="abrirWhatsappAsistur()">
+            {{ t.ayudaWhatsapp }}
+          </button>
+        </div>
+      </section>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
+        <ion-icon class="nav-menu-icon" name="home"></ion-icon>
+        <span class="nav-label">{{ t.inicio }}</span>
+      </button>
+
+      <button
+        type="button"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
+        <ion-icon class="nav-menu-icon" name="alert-circle"></ion-icon>
+        <span class="nav-label">{{ t.denunciaNav }}</span>
+      </button>
+
+      <button
+        type="button"
+        class="active"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
+        <ion-icon class="nav-menu-icon" name="book"></ion-icon>
+        <span class="nav-label">{{ t.info }}</span>
+      </button>
+
+      <button
+        type="button"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
+        <ion-icon class="nav-menu-icon" name="chatbubble-ellipses"></ion-icon>
+        <span class="nav-label">{{ t.apoyo }}</span>
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

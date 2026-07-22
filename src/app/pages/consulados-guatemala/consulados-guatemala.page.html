@@ -1,0 +1,230 @@
+<ion-content [fullscreen]="true">
+  <main class="consulados-screen">
+
+    <header class="topbar">
+      <button class="back-btn" routerLink="/viajas-extranjero">
+        ‹
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button class="sos-btn" routerLink="/denuncia">
+        {{ t.sos }}
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button [class.active]="lang === 'es'" (click)="setLang('es')">
+          ES
+        </button>
+
+        <button [class.active]="lang === 'en'" (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <section class="hero-card">
+        <div class="hero-text">
+          <span>{{ t.etiqueta }}</span>
+          <h2>{{ t.titulo }}</h2>
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-icon">
+          🏢
+        </div>
+      </section>
+
+      <section class="search-card">
+        <div class="search-box">
+          <span>⌕</span>
+
+          <input
+            type="text"
+            [(ngModel)]="busqueda"
+            [placeholder]="placeholderBuscador"
+          >
+        </div>
+
+        <div class="result-row">
+          <button
+            *ngIf="paisSeleccionado"
+            class="back-country-btn"
+            type="button"
+            (click)="volverAPaises()"
+          >
+            ‹ {{ t.volverPaises }}
+          </button>
+
+          <p *ngIf="!paisSeleccionado">
+            {{ paises.length }} {{ t.resultados }}
+          </p>
+
+          <p *ngIf="paisSeleccionado">
+            {{ consuladosFiltrados.length }} {{ t.resultados }}
+          </p>
+        </div>
+      </section>
+
+      <!-- LISTA DE PAÍSES -->
+      <section class="countries-list" *ngIf="!paisSeleccionado">
+
+        <button
+          class="country-card"
+          type="button"
+          *ngFor="let item of paises"
+          (click)="seleccionarPais(item.pais)"
+        >
+          <div class="flag-box">
+            <img
+              *ngIf="item.banderaUrl"
+              [src]="item.banderaUrl"
+              [alt]="item.pais"
+            >
+
+            <span *ngIf="!item.banderaUrl">
+              {{ item.codigo || obtenerInicialesPais(item.pais) }}
+            </span>
+          </div>
+
+          <div class="country-info">
+            <h3>{{ item.pais }}</h3>
+            <p>{{ t.verConsulados }}</p>
+          </div>
+
+          <div class="arrow">
+            ›
+          </div>
+        </button>
+
+        <section class="empty-card" *ngIf="paises.length === 0">
+          {{ t.sinResultados }}
+        </section>
+
+      </section>
+
+      <!-- CONSULADOS DEL PAÍS SELECCIONADO -->
+      <section class="consulates-list" *ngIf="paisSeleccionado">
+
+        <section class="selected-country-card">
+          <div class="selected-flag">
+            <img
+              *ngIf="obtenerBanderaUrl(paisSeleccionado)"
+              [src]="obtenerBanderaUrl(paisSeleccionado)"
+              [alt]="paisSeleccionado || ''"
+            >
+
+            <span *ngIf="!obtenerBanderaUrl(paisSeleccionado)">
+              {{ obtenerInicialesPais(paisSeleccionado) }}
+            </span>
+          </div>
+
+          <div>
+            <span>{{ t.verConsulados }}</span>
+            <h3>{{ paisSeleccionado }}</h3>
+          </div>
+        </section>
+
+        <article
+          class="consulate-card"
+          *ngFor="let item of consuladosFiltrados"
+        >
+          <div class="consulate-header">
+            <div class="pin-icon">
+              ⦿
+            </div>
+
+            <div>
+              <span>{{ obtenerEncabezado(item) }}</span>
+              <h3>{{ obtenerNombre(item) }}</h3>
+            </div>
+          </div>
+
+          <div class="data-box" *ngIf="obtenerDireccion(item) as direccion">
+            <strong>{{ t.direccion }}</strong>
+            <p>{{ direccion }}</p>
+          </div>
+
+          <div class="data-box" *ngIf="obtenerTelefonos(item) as telefonos">
+            <strong>{{ t.telefonos }}</strong>
+            <p>{{ telefonos }}</p>
+          </div>
+
+          <div class="data-box" *ngIf="obtenerCorreo(item) as correo">
+            <strong>{{ t.correo }}</strong>
+            <p>{{ correo }}</p>
+          </div>
+
+          <div class="data-box" *ngIf="obtenerHorario(item) as horario">
+            <strong>{{ t.horario }}</strong>
+            <p>{{ horario }}</p>
+          </div>
+
+          <div class="data-box" *ngIf="obtenerJurisdiccion(item) as jurisdiccion">
+            <strong>{{ t.jurisdiccion }}</strong>
+            <p>{{ jurisdiccion }}</p>
+          </div>
+
+          <button
+            *ngIf="obtenerMapa(item)"
+            class="map-btn"
+            type="button"
+            (click)="abrirLink(obtenerMapa(item))"
+          >
+            {{ t.mapa }}
+          </button>
+        </article>
+
+        <section class="empty-card" *ngIf="consuladosFiltrados.length === 0">
+          {{ t.sinResultados }}
+        </section>
+
+      </section>
+
+      <section class="source-card">
+        <div>
+          <h3>{{ t.fuenteTitulo }}</h3>
+          <p>{{ t.fuenteTexto }}</p>
+        </div>
+
+        <button
+          type="button"
+          (click)="abrirLink('https://www.minex.gob.gt/Directorio.aspx')"
+        >
+          {{ t.fuenteBoton }}
+        </button>
+      </section>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button routerLink="/inicio">
+        <b>⌂</b>
+        <span>{{ t.inicio }}</span>
+      </button>
+
+      <button routerLink="/denuncia">
+        <b>!</b>
+        <span>{{ t.denuncia }}</span>
+      </button>
+
+      <button class="active" routerLink="/informacion">
+        <b>i</b>
+        <span>{{ t.info }}</span>
+      </button>
+
+      <button routerLink="/apoyo">
+        <b>●</b>
+        <span>{{ t.apoyo }}</span>
+      </button>
+
+      <button routerLink="/privacidad">
+        <b>?</b>
+        <span>{{ t.acerca }}</span>
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

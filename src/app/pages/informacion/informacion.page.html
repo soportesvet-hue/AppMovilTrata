@@ -1,0 +1,191 @@
+<ion-content [fullscreen]="true">
+  <main class="info-screen">
+    <header class="topbar">
+      <button
+        class="back-btn"
+        routerLink="/inicio"
+        (click)="registrarAccion('volver_inicio', 'inicio')">
+        <ion-icon name="chevron-back"></ion-icon>
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button
+        class="sos-btn"
+        routerLink="/denuncia"
+        (click)="registrarAccion('sos_denuncia', 'denuncia')">
+        SOS
+      </button>
+    </header>
+
+    <section class="content">
+      <div class="info-lang-switch">
+        <button [class.active]="lang === 'es'" (click)="setLang('es')">
+          ES
+        </button>
+
+        <button [class.active]="lang === 'en'" (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <section class="hero-card">
+        <div>
+          <span class="hero-tag">{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>
+            {{ t.subtitulo }}
+          </p>
+        </div>
+
+        <div class="hero-icon info-heart-icon">
+          <svg class="info-heart-svg" viewBox="0 0 120 120" aria-hidden="true">
+            <defs>
+              <linearGradient id="infoHeartGradient" x1="25" y1="15" x2="95" y2="105" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#72f0ff"></stop>
+                <stop offset="45%" stop-color="#1aa8ff"></stop>
+                <stop offset="100%" stop-color="#0057ff"></stop>
+              </linearGradient>
+
+              <radialGradient id="infoHeartGlow" cx="35%" cy="25%" r="70%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"></stop>
+                <stop offset="30%" stop-color="#aef7ff" stop-opacity="0.55"></stop>
+                <stop offset="100%" stop-color="#0b6dff" stop-opacity="0"></stop>
+              </radialGradient>
+            </defs>
+
+            <path
+              class="heart-main"
+              d="M60 105C45 91 24 76 16 57C8 38 19 20 38 20C49 20 56 27 60 34C64 27 71 20 82 20C101 20 112 38 104 57C96 76 75 91 60 105Z">
+            </path>
+
+            <path
+              class="heart-shine"
+              d="M34 31C23 35 20 48 24 57C28 46 38 39 52 34C47 29 41 28 34 31Z">
+            </path>
+
+            <circle class="heart-glow" cx="43" cy="38" r="34"></circle>
+          </svg>
+        </div>
+      </section>
+
+      <section class="menu-grid">
+        <button
+          class="menu-card"
+          routerLink="/aprende-trata"
+          (click)="registrarAccion('aprende_trata', 'aprende_trata')">
+          <span class="card-icon blue">
+            <ion-icon name="book"></ion-icon>
+          </span>
+
+          <strong>{{ t.aprender }}</strong>
+        </button>
+
+        <button
+          class="menu-card"
+          routerLink="/zona-joven"
+          (click)="registrarAccion('zona_joven', 'zona_joven')">
+          <span class="card-icon purple">
+            <ion-icon name="sparkles"></ion-icon>
+          </span>
+
+          <strong>{{ t.joven }}</strong>
+        </button>
+
+        <button
+          class="menu-card"
+          routerLink="/viajas-extranjero"
+          (click)="registrarAccion('viajas_extranjero', 'viajas_extranjero')">
+          <span class="card-icon cyan">
+            <ion-icon name="airplane"></ion-icon>
+          </span>
+
+          <strong>{{ t.viajar }}</strong>
+        </button>
+
+        <button
+          class="menu-card"
+          routerLink="/visitas-guatemala"
+          (click)="registrarAccion('visitas_guatemala', 'visitas_guatemala')">
+          <span class="card-icon green">
+            <ion-icon name="earth"></ion-icon>
+          </span>
+
+          <strong>{{ t.visitas }}</strong>
+        </button>
+
+        <button
+          class="menu-card"
+          routerLink="/videos"
+          (click)="registrarAccion('videos', 'videos')">
+          <span class="card-icon red">
+            <ion-icon name="play-circle"></ion-icon>
+          </span>
+
+          <strong>{{ t.videos }}</strong>
+        </button>
+
+        <button
+          class="menu-card emergency-card"
+          routerLink="/denuncia"
+          (click)="registrarAccion('denuncia_desde_informacion', 'denuncia')">
+          <span class="card-icon yellow">
+            <ion-icon name="alert-circle"></ion-icon>
+          </span>
+
+          <strong>{{ t.denuncia }}</strong>
+        </button>
+      </section>
+
+      <section class="quick-actions only-one">
+        <button
+          class="action-btn outline"
+          routerLink="/apoyo"
+          (click)="registrarAccion('pedir_orientacion', 'apoyo')">
+          {{ t.orientacion }}
+        </button>
+      </section>
+    </section>
+
+    <nav class="bottom-nav">
+      <button
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
+        <b><ion-icon name="home"></ion-icon></b>
+        {{ t.inicio }}
+      </button>
+
+      <button
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
+        <b><ion-icon name="alert-circle"></ion-icon></b>
+        {{ t.denunciaNav }}
+      </button>
+
+      <button
+        class="active"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
+        <b><ion-icon name="book"></ion-icon></b>
+        {{ t.info }}
+      </button>
+
+      <button
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
+        <b><ion-icon name="chatbubble-ellipses"></ion-icon></b>
+        {{ t.apoyo }}
+      </button>
+
+      <button
+        routerLink="/privacidad"
+        class="about-nav"
+        (click)="registrarAccion('nav_acerca_de', 'privacidad')">
+        <b class="nav-icon">!</b>
+        <span>{{ t.acerca }}</span>
+      </button>
+    </nav>
+  </main>
+</ion-content>

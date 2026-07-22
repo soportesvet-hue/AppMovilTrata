@@ -1,0 +1,138 @@
+<main class="inicio-screen">
+
+  <section class="home-content">
+
+    <div class="bg-circle-left"></div>
+    <div class="bg-circle-right"></div>
+    <div class="dots-left"></div>
+    <div class="dots-right"></div>
+
+    <div class="lang-switch">
+      <button [class.active]="lang === 'es'" (click)="setLang('es')">
+        ES
+      </button>
+
+      <button [class.active]="lang === 'en'" (click)="setLang('en')">
+        EN
+      </button>
+    </div>
+
+    <section class="brand-section">
+      <div class="logo-wrap">
+        <img src="assets/img/logo.png" alt="Contigo GT">
+      </div>
+
+      <h1>
+        {{ t.appNombre }}
+        <span>{{ t.appGt }}</span>
+      </h1>
+
+      <div class="heart-line">
+        <span></span>
+        <b>♥</b>
+        <span></span>
+      </div>
+
+      <p>{{ t.lema }}</p>
+    </section>
+
+    <section class="main-actions">
+
+      <!-- Botón discreto para ayuda inmediata -->
+      <button class="action-card help" type="button" (click)="irDenuncia()">
+        <div class="icon-box help-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.4 4.8 5.2v5.4c0 4.5 2.9 8.7 7.2 10.1 4.3-1.4 7.2-5.6 7.2-10.1V5.2L12 2.4z"></path>
+            <path class="icon-line" d="M12 7.6c1.5-1.6 4.2-.5 4.2 1.8 0 2.6-3.5 4.4-4.2 5-.7-.6-4.2-2.4-4.2-5 0-2.3 2.7-3.4 4.2-1.8z"></path>
+          </svg>
+        </div>
+
+        <div class="action-copy">
+          <small>{{ t.ayudaEtiqueta }}</small>
+          <strong>{{ t.ayuda }}</strong>
+          <p>{{ t.ayudaDescripcion }}</p>
+        </div>
+
+        <div class="circle-arrow help-arrow">
+          ›
+        </div>
+      </button>
+
+      <!-- Botón información con corazón azul SVG -->
+      <button class="action-card info" type="button" (click)="irInformacion()">
+        <div class="icon-box info-icon">
+          <svg class="info-heart-svg" viewBox="0 0 120 120" aria-hidden="true">
+            <defs>
+              <linearGradient id="blueHeartGradient" x1="25" y1="15" x2="95" y2="105" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#72f0ff"></stop>
+                <stop offset="45%" stop-color="#1aa8ff"></stop>
+                <stop offset="100%" stop-color="#0057ff"></stop>
+              </linearGradient>
+
+              <radialGradient id="blueHeartGlow" cx="35%" cy="25%" r="70%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"></stop>
+                <stop offset="28%" stop-color="#aef7ff" stop-opacity="0.55"></stop>
+                <stop offset="100%" stop-color="#0b6dff" stop-opacity="0"></stop>
+              </radialGradient>
+            </defs>
+
+            <path
+              class="heart-main"
+              d="M60 105C45 91 24 76 16 57C8 38 19 20 38 20C49 20 56 27 60 34C64 27 71 20 82 20C101 20 112 38 104 57C96 76 75 91 60 105Z">
+            </path>
+
+            <path
+              class="heart-shine"
+              d="M34 31C23 35 20 48 24 57C28 46 38 39 52 34C47 29 41 28 34 31Z">
+            </path>
+
+            <circle class="heart-glow" cx="43" cy="38" r="34"></circle>
+          </svg>
+        </div>
+
+        <div class="action-copy">
+          <strong>{{ t.informacion }}</strong>
+          <p>{{ t.informacionDescripcion }}</p>
+        </div>
+
+        <div class="circle-arrow info-arrow">
+          ›
+        </div>
+      </button>
+
+    </section>
+
+    <section class="privacy-card">
+      <div class="privacy-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zM10 7a2 2 0 0 1 4 0v2h-4V7zm3 9.7V18h-2v-1.3a2 2 0 1 1 2 0z"></path>
+        </svg>
+      </div>
+
+      <div>
+        <strong>{{ t.privacidadTitulo }}</strong>
+        <p>{{ t.privacidadTexto }}</p>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Pantalla de carga inicial -->
+  <section class="splash-screen" [hidden]="!mostrarSplash">
+    <div class="splash-card">
+      <img src="assets/img/logo.png" alt="Contigo GT">
+
+      <h1>
+        {{ t.appNombre }}
+        <span>{{ t.appGt }}</span>
+      </h1>
+
+      <p>{{ t.cargando }}</p>
+
+      <div class="loader-line">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+</main>

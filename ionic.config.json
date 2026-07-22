@@ -1,0 +1,7 @@
+{
+  "name": "svet-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

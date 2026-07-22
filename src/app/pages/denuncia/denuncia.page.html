@@ -1,0 +1,216 @@
+<ion-content [fullscreen]="true">
+  <main class="denuncia-screen">
+
+    <header class="topbar">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/inicio"
+        (click)="registrarAccion('volver_inicio', 'inicio')">
+        ‹
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button
+        type="button"
+        class="exit-btn"
+        routerLink="/inicio"
+        (click)="registrarAccion('salir_inicio', 'inicio')">
+        {{ t.salir }}
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
+          ES
+        </button>
+
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <!-- ENCABEZADO COMPACTO -->
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="hero-tag">{{ t.etiqueta }}</span>
+
+          <h2>{{ t.titulo }}</h2>
+
+          <p>
+            {{ t.subtitulo }}
+          </p>
+        </div>
+
+        <div class="hero-icon">
+          !
+        </div>
+      </section>
+
+      <!-- PNC -->
+      <article class="contact-card pnc-card">
+        <div class="card-accent"></div>
+
+        <div class="card-header">
+          <span class="mini-tag pnc-tag">{{ t.pncEtiqueta }}</span>
+          <div class="card-number pnc-number">{{ t.pncNumero }}</div>
+        </div>
+
+        <div class="card-main">
+          <div class="logo-box">
+            <img src="assets/img/pnc.png" alt="PNC">
+          </div>
+
+          <div class="card-info">
+            <h3>{{ t.pncTitulo }}</h3>
+            <p>{{ t.pncTexto }}</p>
+
+            <button
+              type="button"
+              class="btn btn-blue"
+              (click)="llamar('110')">
+              {{ t.pncBoton }}
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- CRIME STOPPERS -->
+      <article class="contact-card crime-card">
+        <div class="card-accent"></div>
+
+        <div class="card-header">
+          <span class="mini-tag crime-tag">{{ t.crimeEtiqueta }}</span>
+          <div class="card-number crime-number">{{ t.crimeNumero }}</div>
+        </div>
+
+        <div class="card-main">
+          <div class="logo-box">
+            <img src="assets/img/crime.png" alt="Crime Stoppers">
+          </div>
+
+          <div class="card-info">
+            <h3>{{ t.crimeTitulo }}</h3>
+            <p>{{ t.crimeTexto }}</p>
+
+            <div class="crime-buttons">
+              <button
+                type="button"
+                class="btn btn-crime-call"
+                (click)="llamar('1561')">
+                <span class="btn-main">{{ t.crimeBotonLlamar }}</span>
+                <span class="btn-sub">{{ t.crimeBotonLlamarSub }}</span>
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-whatsapp"
+                (click)="abrirWhatsappCrime()">
+                <span class="btn-main">{{ t.crimeBotonWhatsapp }}</span>
+                <span class="btn-sub">{{ t.crimeBotonWhatsappSub }}</span>
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-crime-web"
+                (click)="abrirWeb('https://tupista.gt', 'tupista_crime_stoppers')">
+                <span class="btn-main">{{ t.crimeBotonWeb }}</span>
+                <span class="btn-sub">{{ t.crimeBotonWebSub }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PGN -->
+      <article class="contact-card pgn-card">
+        <div class="card-accent"></div>
+
+        <div class="card-header">
+          <span class="mini-tag pgn-tag">{{ t.pgnEtiqueta }}</span>
+          <div class="card-number pgn-number">{{ t.pgnNumero }}</div>
+        </div>
+
+        <div class="card-main">
+          <div class="logo-box pgn-logo-box">
+            <img src="assets/img/pgn.png" alt="PGN">
+          </div>
+
+          <div class="card-info">
+            <h3>{{ t.pgnTitulo }}</h3>
+            <p>{{ t.pgnSubtexto }}</p>
+
+            <div class="pgn-buttons">
+              <button
+                type="button"
+                class="btn btn-pgn-phone"
+                (click)="llamar('1584')">
+                {{ t.pgnBotonTelefono }}
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-pgn-web"
+                (click)="abrirWeb('https://pgn.gob.gt/denuncia-aqui-ninez-adolescencia/', 'pgn_denuncia_web')">
+                {{ t.pgnBotonWeb }}
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-pgn-dir"
+                (click)="abrirWeb('https://pgn.gob.gt/directorio-delegaciones-regionales/', 'pgn_directorio')">
+                {{ t.pgnBotonDirectorio }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
+        <span class="nav-icon">⌂</span>
+        {{ t.inicio }}
+      </button>
+
+      <button
+        type="button"
+        class="active"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
+        <span class="nav-icon">!</span>
+        {{ t.denunciaNav }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
+        <span class="nav-icon">i</span>
+        {{ t.info }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
+        <span class="nav-icon">A</span>
+        {{ t.apoyo }}
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

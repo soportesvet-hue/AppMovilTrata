@@ -1,0 +1,498 @@
+ion-content {
+  --background: #edf5ff;
+}
+
+.viajas-screen {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background:
+    radial-gradient(circle at 88% 6%, rgba(255, 200, 61, 0.16), transparent 28%),
+    radial-gradient(circle at 8% 92%, rgba(65, 188, 235, 0.18), transparent 24%),
+    linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+  color: #17345d;
+  position: relative;
+  padding-bottom: 86px;
+  overflow-x: hidden;
+}
+
+/* Barra superior */
+.topbar {
+  height: 90px;
+  padding: 34px 14px 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(255, 200, 61, 0.22), transparent 30%),
+    linear-gradient(135deg, #0a3d91, #061d49);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 56, 118, 0.16);
+
+  h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+}
+
+.back-btn,
+.sos-btn {
+  border: 0;
+  color: #ffffff;
+  border-radius: 13px;
+  height: 38px;
+  font-weight: 900;
+}
+
+.back-btn {
+  width: 38px;
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.16);
+  display: grid;
+  place-items: center;
+}
+
+.sos-btn {
+  width: 54px;
+  font-size: 11px;
+  background: linear-gradient(135deg, #ff5f6d, #ff2e7a);
+}
+
+/* Contenido */
+.content {
+  padding: 18px 17px 22px;
+}
+
+/* Idioma */
+.lang-switch {
+  width: fit-content;
+  margin: 0 0 14px auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(10, 61, 145, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 10px 20px rgba(10, 61, 145, 0.18);
+  backdrop-filter: blur(8px);
+
+  button {
+    border: 0;
+    outline: none;
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  button.active {
+    background: #ffc83d;
+    color: #0a3d91;
+  }
+}
+
+/* Hero */
+.hero-card {
+  display: grid;
+  grid-template-columns: 1fr 78px;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 200, 61, 0.20), transparent 34%),
+    linear-gradient(135deg, #ffffff, #f3fbff);
+  border: 1px solid #dfe9f5;
+  box-shadow: 0 14px 28px rgba(20, 50, 90, 0.08);
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  h2 {
+    margin: 6px 0 7px;
+    color: #0a3d91;
+    font-size: 26px;
+    line-height: 1.05;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: #24496f;
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 800;
+  }
+}
+
+.hero-tag {
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff4cc;
+  color: #9b6500;
+  font-size: 10.5px;
+  font-weight: 900;
+}
+
+/* Avión animado */
+.hero-icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #26c6da, #1e88e5);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  box-shadow: 0 12px 24px rgba(30, 136, 229, 0.22);
+  position: relative;
+  overflow: hidden;
+  animation: heroGlow 3s ease-in-out infinite;
+}
+
+.plane-icon::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 62%);
+  opacity: 0.7;
+}
+
+.plane-trail {
+  position: absolute;
+  left: 12px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.52);
+  z-index: 1;
+  animation: trailMove 2.6s ease-in-out infinite;
+}
+
+.trail-one {
+  width: 26px;
+  top: 31px;
+}
+
+.trail-two {
+  width: 17px;
+  top: 41px;
+  opacity: 0.42;
+  animation-delay: 0.35s;
+}
+
+.plane-animated {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  color: #ffffff;
+  animation: planeFly 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Tarjetas */
+.consulados-card,
+.tips-card {
+  background: #ffffff;
+  border: 1px solid #dfe9f5;
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 24px rgba(20, 50, 90, 0.07);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+
+  h3 {
+    margin: 0;
+    color: #08244f;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+}
+
+.section-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 16px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  box-shadow: 0 10px 18px rgba(20, 50, 90, 0.12);
+}
+
+.section-icon.cyan {
+  background: linear-gradient(135deg, #41bceb, #0d91c7);
+}
+
+.section-icon.blue {
+  background: linear-gradient(135deg, #1e88e5, #0a3d91);
+}
+
+.consulados-card p,
+.tips-card p {
+  color: #24496f;
+  font-size: 14px;
+  line-height: 1.42;
+  font-weight: 800;
+}
+
+.consulados-btn {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1e88e5, #26c6da);
+  box-shadow: 0 12px 22px rgba(30, 136, 229, 0.18);
+}
+
+.consulados-btn:active {
+  transform: scale(0.985);
+}
+
+/* Consejos */
+.tips-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.tips-card::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 82px;
+  height: 64px;
+  opacity: 0.12;
+  background-image: radial-gradient(#0a3d91 1.7px, transparent 1.7px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.tips-intro {
+  margin: 0 0 14px;
+  color: #0a3d91 !important;
+  font-weight: 900 !important;
+}
+
+.tips-list {
+  display: grid;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.tip-item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border-radius: 17px;
+  background:
+    radial-gradient(circle at 96% 10%, rgba(65, 188, 235, 0.13), transparent 34%),
+    linear-gradient(135deg, #ffffff, #eef8ff);
+  border: 1px solid #d7e8f7;
+  box-shadow: 0 8px 16px rgba(20, 50, 90, 0.05);
+  animation: tipIn 0.45s ease both;
+
+  p {
+    margin: 0;
+    color: #17345d;
+    font-size: 13.2px;
+    line-height: 1.35;
+    font-weight: 850;
+  }
+}
+
+.tip-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #41bceb, #0a3d91);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 8px 16px rgba(13, 78, 166, 0.16);
+}
+
+/* Menú inferior */
+.bottom-nav {
+  width: 100%;
+  max-width: 480px;
+  height: 74px;
+  background: #ffffff;
+  border-top: 1px solid #e6edf5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  box-shadow: 0 -10px 28px rgba(20, 50, 90, 0.08);
+  z-index: 20;
+
+  button {
+    width: 25%;
+    border: 0;
+    background: transparent;
+    color: #7a8797;
+    font-size: 11.5px;
+    font-weight: 800;
+  }
+
+  b {
+    display: block;
+    font-size: 23px;
+    line-height: 1.05;
+    margin: 0 auto 2px;
+  }
+
+  button.active {
+    color: #0a3d91;
+    font-weight: 900;
+  }
+}
+
+/* Animaciones */
+@keyframes planeFly {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-8deg) scale(1);
+  }
+
+  25% {
+    transform: translate(3px, -2px) rotate(-2deg) scale(1.02);
+  }
+
+  50% {
+    transform: translate(7px, -6px) rotate(6deg) scale(1.06);
+  }
+
+  75% {
+    transform: translate(3px, -2px) rotate(0deg) scale(1.02);
+  }
+}
+
+@keyframes trailMove {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    box-shadow: 0 12px 24px rgba(30, 136, 229, 0.22);
+  }
+
+  50% {
+    box-shadow: 0 16px 30px rgba(38, 198, 218, 0.34);
+  }
+}
+
+@keyframes tipIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 390px) {
+  .content {
+    padding: 16px 14px 22px;
+  }
+
+  .hero-card {
+    grid-template-columns: 1fr 64px;
+    padding: 16px;
+
+    h2 {
+      font-size: 23px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .hero-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 20px;
+  }
+
+  .plane-animated {
+    font-size: 31px;
+  }
+
+  .trail-one {
+    width: 22px;
+    top: 27px;
+  }
+
+  .trail-two {
+    width: 15px;
+    top: 36px;
+  }
+
+  .consulados-card,
+  .tips-card {
+    padding: 16px;
+  }
+
+  .section-title h3 {
+    font-size: 16px;
+  }
+
+  .section-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    font-size: 20px;
+  }
+
+  .tip-item {
+    padding: 11px;
+  }
+
+  .tip-item p {
+    font-size: 12.8px;
+  }
+}

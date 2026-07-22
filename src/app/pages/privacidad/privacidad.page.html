@@ -1,0 +1,125 @@
+<ion-content [fullscreen]="true">
+  <main class="privacidad-screen">
+
+    <header class="topbar">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/informacion"
+        (click)="registrarAccion('volver_informacion', 'informacion')">
+        ‹
+      </button>
+
+      <h1>{{ t.titulo }}</h1>
+
+      <button
+        type="button"
+        class="exit-btn"
+        routerLink="/inicio"
+        (click)="registrarAccion('salir_inicio', 'inicio')">
+        {{ t.inicio }}
+      </button>
+    </header>
+
+    <section class="content">
+
+      <div class="lang-switch">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
+          ES
+        </button>
+
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
+          EN
+        </button>
+      </div>
+
+      <section class="hero-card">
+        <div>
+          <span>{{ t.etiqueta }}</span>
+          <h2>{{ t.titulo }}</h2>
+          <p>{{ t.subtitulo }}</p>
+        </div>
+
+        <div class="hero-icon">
+          🔒
+        </div>
+      </section>
+
+      <section class="info-card">
+        <h3>{{ t.queEsTitulo }}</h3>
+        <p>{{ t.queEsTexto }}</p>
+      </section>
+
+      <section class="info-card">
+        <h3>{{ t.finalidadTitulo }}</h3>
+        <p>{{ t.finalidadTexto }}</p>
+      </section>
+
+      <section class="privacy-card">
+        <h3>{{ t.privacidadTitulo }}</h3>
+        <p>{{ t.privacidadTexto }}</p>
+      </section>
+
+      <section class="list-card">
+        <h3>{{ t.datosTitulo }}</h3>
+
+        <ul>
+          <li *ngFor="let item of t.datosItems">
+            {{ item }}
+          </li>
+        </ul>
+      </section>
+
+      <button
+        type="button"
+        class="main-btn"
+        routerLink="/informacion"
+        (click)="registrarAccion('regresar_informacion', 'informacion')">
+        {{ t.regresar }}
+      </button>
+
+    </section>
+
+    <nav class="bottom-nav">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
+        <span class="nav-icon">⌂</span>
+        {{ t.inicio }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
+        <span class="nav-icon">!</span>
+        {{ t.denuncia }}
+      </button>
+
+      <button
+        type="button"
+        class="active"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
+        <span class="nav-icon">i</span>
+        {{ t.info }}
+      </button>
+
+      <button
+        type="button"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
+        <span class="nav-icon">A</span>
+        {{ t.apoyo }}
+      </button>
+    </nav>
+
+  </main>
+</ion-content>

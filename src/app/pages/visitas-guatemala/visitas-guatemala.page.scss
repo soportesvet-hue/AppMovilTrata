@@ -1,0 +1,973 @@
+ion-content {
+  --background: #edf5ff;
+}
+
+.visitas-screen {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background:
+    radial-gradient(circle at 88% 7%, rgba(255, 200, 61, 0.16), transparent 28%),
+    radial-gradient(circle at 8% 92%, rgba(65, 188, 235, 0.20), transparent 24%),
+    linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+  color: #17345d;
+  position: relative;
+  padding-bottom: 86px;
+  overflow-x: hidden;
+}
+
+/* Barra superior */
+.topbar {
+  height: 90px;
+  padding: 34px 14px 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(255, 200, 61, 0.22), transparent 30%),
+    linear-gradient(135deg, #0a3d91, #061d49);
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 56, 118, 0.16);
+
+  h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+}
+
+.back-btn,
+.sos-btn {
+  border: 0;
+  color: #ffffff;
+  border-radius: 13px;
+  height: 38px;
+  font-weight: 900;
+}
+
+.back-btn {
+  width: 38px;
+  font-size: 26px;
+  background: rgba(255, 255, 255, 0.16);
+  display: grid;
+  place-items: center;
+}
+
+.sos-btn {
+  width: 54px;
+  font-size: 11px;
+  background: linear-gradient(135deg, #ff5f6d, #ff2e7a);
+}
+
+.content {
+  padding: 18px 17px 118px;
+}
+
+/* Idioma */
+.lang-switch {
+  width: fit-content;
+  margin: 0 0 14px auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(10, 61, 145, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 10px 20px rgba(10, 61, 145, 0.18);
+  backdrop-filter: blur(8px);
+
+  button {
+    border: 0;
+    outline: none;
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  button.active {
+    background: #ffc83d;
+    color: #0a3d91;
+  }
+}
+
+/* Hero */
+.hero-card {
+  display: grid;
+  grid-template-columns: 1fr 88px;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 200, 61, 0.20), transparent 34%),
+    linear-gradient(135deg, #ffffff, #f3fbff);
+  border: 1px solid #dfe9f5;
+  box-shadow: 0 14px 28px rgba(20, 50, 90, 0.08);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.hero-copy h2 {
+  margin: 8px 0 8px;
+  color: #0a3d91;
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.hero-copy p {
+  margin: 0;
+  color: #24496f;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff4cc;
+  color: #0a3d91;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+/* Icono base */
+.hero-icon {
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #00bfa6, #1e88e5);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(30, 136, 229, 0.22);
+}
+
+/* Marimba */
+.marimba-icon {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.35), transparent 38%),
+    linear-gradient(135deg, #00bfa6, #0a3d91) !important;
+  animation: marimbaIconFloat 3s ease-in-out infinite;
+}
+
+.marimba-icon::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  right: -10px;
+  top: -10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+.marimba-glow {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.30), transparent 68%);
+  z-index: 1;
+  animation: marimbaGlowPulse 3s ease-in-out infinite;
+}
+
+.marimba-ring {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.34);
+  z-index: 2;
+  animation: marimbaRingSpin 8s linear infinite;
+}
+
+.marimba-svg {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  z-index: 4;
+  display: block;
+  filter: drop-shadow(0 8px 12px rgba(5, 29, 73, 0.28));
+  animation: marimbaFloat 3s ease-in-out infinite;
+}
+
+.marimba-volcano,
+.marimba-leaf {
+  fill: rgba(255, 255, 255, 0.18);
+}
+
+.marimba-base {
+  fill: #8b4b16;
+}
+
+.marimba-decoration {
+  fill: none;
+  stroke: #ffcf7a;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.bar {
+  fill: #c56b1c;
+  stroke: #ffb85c;
+  stroke-width: 1.2;
+}
+
+.bar-1,
+.bar-5 {
+  fill: #b85f18;
+}
+
+.bar-2,
+.bar-4 {
+  fill: #c96f20;
+}
+
+.bar-3 {
+  fill: #d47a24;
+}
+
+.tube {
+  fill: #f3a328;
+  stroke: #d78016;
+  stroke-width: 1;
+}
+
+.tube-2,
+.tube-3,
+.tube-4 {
+  fill: #ffb638;
+}
+
+.stick {
+  stroke: #f7d7a0;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.mallet {
+  fill: #fff0c7;
+  stroke: #d9a64b;
+  stroke-width: 1.2;
+}
+
+/* Tarjetas */
+.quick-card,
+.info-card,
+.recommend-card,
+.safety-card,
+.tourism-card,
+.turista-card {
+  background: #ffffff;
+  border: 1px solid #dfe9f5;
+  border-radius: 26px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 24px rgba(20, 50, 90, 0.07);
+}
+
+.quick-card {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(65, 188, 235, 0.14), transparent 32%),
+    linear-gradient(135deg, #ffffff, #f7fcff);
+}
+
+.quick-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  color: #ffffff;
+  box-shadow: 0 12px 22px rgba(20, 50, 90, 0.14);
+}
+
+.quick-icon.blue {
+  background: linear-gradient(135deg, #41bceb, #1e88e5);
+}
+
+.quick-content h3 {
+  margin: 0 0 7px;
+  color: #08244f;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.quick-content p {
+  margin: 0 0 10px;
+  color: #24496f;
+  font-size: 13.5px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.quick-link {
+  display: inline-flex;
+  color: #0a3d91;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* Títulos */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 13px;
+
+  h3 {
+    margin: 0;
+    color: #08244f;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+}
+
+.section-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  box-shadow: 0 10px 18px rgba(20, 50, 90, 0.12);
+}
+
+.section-icon.blue-soft {
+  background: #eaf3ff;
+  color: #0a3d91;
+}
+
+.section-icon.green {
+  background: linear-gradient(135deg, #b5dc39, #8ebd19);
+  color: #0a3d91;
+}
+
+.section-icon.shield {
+  background: linear-gradient(135deg, #41bceb, #0a3d91);
+  color: #ffffff;
+}
+
+.info-card p,
+.recommend-card p,
+.safety-card p,
+.tourism-card p,
+.turista-card p {
+  margin: 0;
+  color: #24496f;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+/* Recomendaciones */
+.recommend-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.recommend-card::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 82px;
+  height: 64px;
+  opacity: 0.11;
+  background-image: radial-gradient(#0a3d91 1.7px, transparent 1.7px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.recommend-intro {
+  margin-bottom: 14px !important;
+  color: #0a3d91 !important;
+  font-weight: 900 !important;
+}
+
+.recommend-list {
+  display: grid;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.recommend-item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border-radius: 17px;
+  background:
+    radial-gradient(circle at 96% 10%, rgba(65, 188, 235, 0.13), transparent 34%),
+    linear-gradient(135deg, #ffffff, #eef8ff);
+  border: 1px solid #d7e8f7;
+  box-shadow: 0 8px 16px rgba(20, 50, 90, 0.05);
+  animation: itemIn 0.45s ease both;
+
+  p {
+    margin: 0;
+    color: #17345d;
+    font-size: 13.2px;
+    line-height: 1.35;
+    font-weight: 850;
+  }
+}
+
+.recommend-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #41bceb, #0a3d91);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 8px 16px rgba(13, 78, 166, 0.16);
+}
+
+/* Seguridad */
+.safety-card {
+  background:
+    radial-gradient(circle at 92% 10%, rgba(65, 188, 235, 0.14), transparent 34%),
+    linear-gradient(135deg, #ffffff, #f7fcff);
+}
+
+.safety-box {
+  background: #f4f9ff;
+  border: 1px solid #d8e9f7;
+  border-radius: 18px;
+  padding: 13px;
+  margin-top: 10px;
+}
+
+.safety-box.highlight {
+  background: #fff8df;
+  border-color: #ffdf7a;
+}
+
+/* Turismo seguro con logo pequeño */
+.asistur-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(65, 188, 235, 0.14), transparent 34%),
+    linear-gradient(135deg, #ffffff, #f7fcff);
+}
+
+.asistur-card::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 76px;
+  height: 58px;
+  opacity: 0.10;
+  background-image: radial-gradient(#0a3d91 1.6px, transparent 1.6px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.asistur-title {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.asistur-mini-logo {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #d6e7f7;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(20, 50, 90, 0.10);
+  animation: asisturIconFloat 3s ease-in-out infinite;
+}
+
+.asistur-mini-logo img {
+  width: 50px;
+  height: auto;
+  max-height: 50px;
+  object-fit: contain;
+  display: block;
+  animation: asisturLogoPulse 2.8s ease-in-out infinite;
+}
+
+.asistur-title-text {
+  min-width: 0;
+}
+
+.asistur-label {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0a3d91;
+  font-size: 9.5px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.asistur-card h3 {
+  margin: 0;
+  color: #08244f;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.asistur-card p {
+  position: relative;
+  z-index: 2;
+  margin-top: 12px;
+}
+
+.tourism-card button {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  margin-top: 13px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #0a3d91, #1e88e5);
+  box-shadow: 0 12px 22px rgba(30, 136, 229, 0.18);
+}
+
+/* Asistencia turista */
+.turista-card {
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 200, 61, 0.18), transparent 34%),
+    linear-gradient(135deg, #ffffff, #f9fcff);
+}
+
+.turista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.turista-tag {
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #ffe1ec;
+  color: #c93663;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.turista-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #0a3d91;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.turista-number span {
+  font-size: 12px;
+  font-weight: 900;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #0a3d91;
+}
+
+.turista-card h3 {
+  margin: 0 0 8px;
+  color: #0a3d91;
+  font-size: 23px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.turista-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.turista-btn {
+  min-height: 46px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 10px;
+}
+
+.btn-1500 {
+  background: linear-gradient(135deg, #ff5f6d, #f03d73);
+}
+
+.btn-2290 {
+  background: linear-gradient(135deg, #1e88e5, #0a3d91);
+}
+
+.btn-whatsapp {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #28c76f, #1ca65a);
+}
+
+/* Bottom nav */
+.bottom-nav {
+  width: 100%;
+  max-width: 480px;
+  height: 86px;
+  background: #ffffff;
+  border-top: 1px solid #e6edf5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  box-shadow: 0 -10px 28px rgba(20, 50, 90, 0.08);
+  z-index: 999;
+
+  button {
+    width: 25%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    color: #7a8797;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 5px 2px;
+    text-align: center;
+  }
+
+  ion-icon.nav-menu-icon {
+    display: block !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    font-size: 32px !important;
+    line-height: 1 !important;
+    margin: 0 auto 2px !important;
+    color: #7a8797 !important;
+  }
+
+  .nav-label {
+    display: block !important;
+    color: #7a8797 !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+  }
+
+  button.active,
+  button.active ion-icon.nav-menu-icon,
+  button.active .nav-label {
+    color: #0a3d91 !important;
+    font-weight: 900;
+  }
+}
+
+
+/* Ajustes visuales puntuales */
+.quick-card {
+  width: 100%;
+  border: 1px solid #dfe9f5;
+  text-align: left;
+}
+
+.quick-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 9px 16px;
+  border-radius: 14px;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #0a3d91, #1e88e5);
+  box-shadow: 0 10px 18px rgba(30, 136, 229, 0.18);
+  font-size: 13px;
+  font-weight: 950;
+  margin-top: 2px;
+}
+
+.info-circle {
+  background: linear-gradient(135deg, #eaf3ff, #d9efff);
+  color: #0a3d91;
+  box-shadow: 0 10px 20px rgba(30, 136, 229, 0.14);
+}
+
+.info-circle ion-icon {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+/* Refuerzo para que Ionic no reduzca los íconos del menú */
+:host ::ng-deep .visitas-screen .bottom-nav ion-icon.nav-menu-icon {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 32px !important;
+}
+
+:host ::ng-deep .visitas-screen .bottom-nav .nav-label {
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+
+/* Animaciones */
+@keyframes marimbaIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 12px 24px rgba(30, 136, 229, 0.22);
+  }
+
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(65, 188, 235, 0.36);
+  }
+}
+
+@keyframes marimbaFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(-1deg) scale(1.06);
+  }
+}
+
+@keyframes marimbaGlowPulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes marimbaRingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes asisturIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(20, 50, 90, 0.10);
+  }
+
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 24px rgba(65, 188, 235, 0.22);
+  }
+}
+
+@keyframes asisturLogoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes itemIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 390px) {
+  .content {
+    padding: 16px 14px 118px;
+  }
+
+  .hero-card {
+    grid-template-columns: 1fr 72px;
+    padding: 16px;
+  }
+
+  .hero-copy h2 {
+    font-size: 23px;
+  }
+
+  .hero-copy p {
+    font-size: 13px;
+  }
+
+  .hero-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 22px;
+  }
+
+  .marimba-svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .marimba-ring {
+    width: 74px;
+    height: 74px;
+  }
+
+  .marimba-glow {
+    width: 84px;
+    height: 84px;
+  }
+
+  .quick-card,
+  .info-card,
+  .recommend-card,
+  .safety-card,
+  .tourism-card,
+  .turista-card {
+    padding: 16px;
+  }
+
+  .section-title h3 {
+    font-size: 16px;
+  }
+
+  .asistur-mini-logo {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+    border-radius: 16px;
+  }
+
+  .asistur-mini-logo img {
+    width: 45px;
+    max-height: 45px;
+  }
+
+  .asistur-label {
+    font-size: 9px;
+    padding: 4px 9px;
+  }
+
+  .asistur-card h3 {
+    font-size: 16px;
+  }
+
+  .turista-number {
+    font-size: 26px;
+  }
+
+  .turista-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-whatsapp {
+    grid-column: auto;
+  }
+}
+
+
+/* Refuerzo final específico para Visitas Guatemala */
+.visitas-screen .bottom-nav {
+  height: 86px !important;
+}
+
+.visitas-screen .bottom-nav ion-icon.nav-menu-icon {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 32px !important;
+}
+
+.visitas-screen .bottom-nav .nav-label {
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 390px) {
+  .visitas-screen .bottom-nav {
+    height: 84px !important;
+  }
+
+  .visitas-screen .bottom-nav ion-icon.nav-menu-icon {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 30px !important;
+  }
+
+  .visitas-screen .bottom-nav .nav-label {
+    font-size: 11.5px !important;
+  }
+}

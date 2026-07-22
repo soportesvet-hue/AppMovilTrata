@@ -1,0 +1,544 @@
+:host {
+  display: block;
+}
+
+ion-content {
+  --background: #edf5ff;
+}
+
+.denuncia-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 92% 18%, rgba(255, 200, 61, 0.15) 0 90px, transparent 92px),
+    radial-gradient(circle at 0% 86%, rgba(65, 188, 235, 0.16) 0 120px, transparent 124px),
+    linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 78px;
+  background: #2057b3;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 48px 1fr 70px;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 14px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: 0 10px 24px rgba(32, 87, 179, 0.15);
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.28rem;
+    font-weight: 900;
+  }
+}
+
+.back-btn,
+.exit-btn {
+  border: 0;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.exit-btn {
+  height: 40px;
+  border-radius: 14px;
+  background: #ffd12f;
+  color: #205183;
+  font-size: 0.86rem;
+}
+
+.content {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 12px 13px 92px;
+}
+
+.lang-switch {
+  width: fit-content;
+  margin: 0 0 12px auto;
+  background: #7094cf;
+  border-radius: 999px;
+  padding: 4px;
+  display: flex;
+  gap: 2px;
+  box-shadow: 0 8px 18px rgba(32, 81, 131, 0.15);
+
+  button {
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    min-width: 42px;
+    height: 32px;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.78rem;
+  }
+
+  .active {
+    background: #ffd12f;
+    color: #205183;
+  }
+}
+
+/* ENCABEZADO COMPACTO */
+.hero-card {
+  background:
+    radial-gradient(circle at 92% 20%, rgba(255, 200, 61, 0.18), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
+  border-radius: 24px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 74px;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 10px 22px rgba(32, 81, 131, 0.08);
+  margin-bottom: 13px;
+  border: 1px solid rgba(32, 81, 131, 0.08);
+}
+
+.hero-copy {
+  h2 {
+    margin: 7px 0 7px;
+    color: #2057b3;
+    font-size: 1.72rem;
+    line-height: 1.05;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    color: #36506f;
+    font-size: 0.88rem;
+    line-height: 1.42;
+    font-weight: 750;
+  }
+}
+
+.hero-tag {
+  display: inline-flex;
+  background: #f2df9e;
+  color: #755d00;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.hero-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ffc83d, #ffb000);
+  color: #2057b3;
+  display: grid;
+  place-items: center;
+  font-size: 2.1rem;
+  font-weight: 900;
+  box-shadow: 0 12px 26px rgba(255, 184, 0, 0.22);
+  animation: pulseIcon 2.8s ease-in-out infinite;
+}
+
+/* TARJETAS */
+.contact-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 14px 14px 16px;
+  box-shadow: 0 10px 22px rgba(32, 81, 131, 0.08);
+  margin-bottom: 13px;
+  overflow: hidden;
+}
+
+.card-accent {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 6px;
+  border-radius: 0 10px 10px 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 10px 14px;
+}
+
+.mini-tag {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 900;
+}
+
+.card-number {
+  color: #2057b3;
+  font-size: 1rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.card-main {
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-left: 14px;
+}
+
+.logo-box {
+  width: 66px;
+  height: 66px;
+  border-radius: 18px;
+  background: #f5f9ff;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(32, 81, 131, 0.14);
+  box-shadow: 0 8px 18px rgba(32, 81, 131, 0.08);
+
+  img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    animation: floatLogo 3.4s ease-in-out infinite;
+    transform-origin: center;
+  }
+}
+
+.card-info {
+  min-width: 0;
+
+  h3 {
+    margin: 2px 0 6px;
+    color: #2057b3;
+    font-size: 1.38rem;
+    line-height: 1.08;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0 0 10px;
+    color: #36506f;
+    font-size: 0.88rem;
+    line-height: 1.36;
+    font-weight: 750;
+  }
+}
+
+/* BOTONES */
+.btn {
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  min-height: 44px;
+  padding: 10px 13px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* PNC */
+.pnc-card .card-accent {
+  background: linear-gradient(180deg, #3f86ff, #2b6fe1);
+}
+
+.pnc-tag {
+  background: #eaf1ff;
+  color: #2057b3;
+}
+
+.pnc-number {
+  color: #2057b3;
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, #2f78ee, #356fda);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(47, 120, 238, 0.20);
+}
+
+/* CRIME STOPPERS */
+.crime-card .card-accent {
+  background: linear-gradient(180deg, #051D49, #41bceb);
+}
+
+.crime-tag {
+  background: linear-gradient(135deg, #f3d962, #e8c84b);
+  color: #051D49;
+}
+
+.crime-number {
+  color: #051D49;
+}
+
+.crime-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  width: 100%;
+}
+
+.crime-buttons .btn {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 15px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.btn-main {
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.btn-sub {
+  font-size: 0.64rem;
+  line-height: 1.1;
+  font-weight: 800;
+  opacity: 0.94;
+}
+
+.btn-crime-call {
+  background: linear-gradient(135deg, #051D49, #205183);
+  color: #ffffff;
+  box-shadow: 0 9px 18px rgba(5, 29, 73, 0.20);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25c46b, #1fb95f);
+  color: #ffffff;
+  box-shadow: 0 9px 18px rgba(37, 196, 107, 0.20);
+}
+
+.btn-crime-web {
+  grid-column: 1 / -1;
+  min-height: 50px;
+  background: linear-gradient(135deg, #41bceb, #79d7f4);
+  color: #051D49;
+  box-shadow: 0 9px 18px rgba(65, 188, 235, 0.17);
+  border: 1px solid rgba(32, 81, 131, 0.12);
+}
+
+/* PGN - PALETA INSTITUCIONAL */
+.pgn-card {
+  border: 1px solid rgba(65, 188, 235, 0.24);
+  background:
+    radial-gradient(circle at 94% 10%, rgba(186, 213, 50, 0.12), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.pgn-card .card-accent {
+  background: linear-gradient(180deg, #205183, #E47B3A, #BAD532, #41bceb);
+}
+
+.pgn-tag {
+  background: rgba(186, 213, 50, 0.24);
+  color: #205183;
+}
+
+.pgn-number {
+  color: #205183;
+}
+
+.pgn-card .card-info h3 {
+  color: #205183;
+}
+
+.pgn-card .card-info p {
+  color: #405a75;
+}
+
+.pgn-logo-box {
+  background: #ffffff;
+  border-color: rgba(32, 81, 131, 0.18);
+}
+
+.pgn-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.btn-pgn-phone {
+  width: 100%;
+  background: linear-gradient(135deg, #E47B3A, #d56a28);
+  color: #ffffff;
+  box-shadow: 0 9px 18px rgba(228, 123, 58, 0.20);
+}
+
+.btn-pgn-web {
+  width: 100%;
+  background: linear-gradient(135deg, #41bceb, #83d9f4);
+  color: #051D49;
+  border: 1px solid rgba(32, 81, 131, 0.14);
+}
+
+.btn-pgn-dir {
+  width: 100%;
+  background: linear-gradient(135deg, #BAD532, #a8c829);
+  color: #205183;
+  border: 1px solid rgba(186, 213, 50, 0.30);
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  background: #ffffff;
+  border-top: 1px solid #d9e3f0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 8px 4px calc(8px + env(safe-area-inset-bottom));
+  box-shadow: 0 -8px 20px rgba(32, 81, 131, 0.06);
+
+  button {
+    border: 0;
+    background: transparent;
+    color: #6d7d94;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 6px 0;
+  }
+
+  .active {
+    color: #2057b3;
+  }
+}
+
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  border: 2px solid currentColor;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-size: 0.92rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+/* ANIMACIONES */
+@keyframes floatLogo {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes pulseIcon {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 12px 26px rgba(255, 184, 0, 0.22);
+  }
+
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 15px 30px rgba(255, 184, 0, 0.28);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 380px) {
+  .hero-card {
+    grid-template-columns: 1fr 64px;
+    padding: 14px;
+  }
+
+  .hero-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 1.85rem;
+    border-radius: 20px;
+  }
+
+  .hero-copy h2 {
+    font-size: 1.55rem;
+  }
+
+  .hero-copy p {
+    font-size: 0.82rem;
+  }
+
+  .card-main {
+    grid-template-columns: 58px 1fr;
+    gap: 10px;
+  }
+
+  .logo-box {
+    width: 58px;
+    height: 58px;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .card-info h3 {
+    font-size: 1.18rem;
+  }
+
+  .card-info p {
+    font-size: 0.82rem;
+  }
+
+  .card-number {
+    font-size: 0.9rem;
+  }
+
+  .crime-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-crime-web {
+    grid-column: auto;
+  }
+
+  .btn-main {
+    font-size: 0.84rem;
+  }
+
+  .btn-sub {
+    font-size: 0.62rem;
+  }
+}
