@@ -67,7 +67,7 @@ export class ViajasExtranjeroPage {
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
     },
 
     en: {
@@ -96,7 +96,7 @@ export class ViajasExtranjeroPage {
       inicio: 'Home',
       denunciaNav: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
     },
   };
 

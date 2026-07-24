@@ -120,7 +120,7 @@ export class VisitasGuatemalaPage {
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
     },
 
     en: {
@@ -170,7 +170,7 @@ export class VisitasGuatemalaPage {
       inicio: 'Home',
       denunciaNav: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
     },
   };
 

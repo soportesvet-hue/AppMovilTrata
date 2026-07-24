@@ -160,114 +160,47 @@ ion-content {
   box-shadow: 0 12px 24px rgba(30, 136, 229, 0.22);
 }
 
-/* Marimba */
-.marimba-icon {
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.35), transparent 38%),
-    linear-gradient(135deg, #00bfa6, #0a3d91) !important;
-  animation: marimbaIconFloat 3s ease-in-out infinite;
+/* Bandera de Guatemala */
+.guatemala-flag-icon {
+  width: 94px;
+  height: 62px;
+  flex: 0 0 94px;
+  border-radius: 16px;
+  padding: 0;
+  background: #ffffff !important;
+  border: 1px solid rgba(140, 186, 224, 0.72);
+  box-shadow:
+    0 12px 24px rgba(24, 74, 133, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  animation: flagWave 3.2s ease-in-out infinite;
 }
 
-.marimba-icon::after {
+.guatemala-flag-icon::before {
   content: "";
   position: absolute;
-  width: 42px;
-  height: 42px;
-  right: -10px;
-  top: -10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-  z-index: 1;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.34), transparent 42%);
+  pointer-events: none;
 }
 
-.marimba-glow {
+.guatemala-flag-icon::after {
+  content: "";
   position: absolute;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.30), transparent 68%);
-  z-index: 1;
-  animation: marimbaGlowPulse 3s ease-in-out infinite;
+  inset: auto 8px 6px 8px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(10, 61, 145, 0.18), rgba(10, 61, 145, 0));
+  pointer-events: none;
 }
 
-.marimba-ring {
-  position: absolute;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  border: 2px dashed rgba(255, 255, 255, 0.34);
-  z-index: 2;
-  animation: marimbaRingSpin 8s linear infinite;
-}
-
-.marimba-svg {
-  width: 72px;
-  height: 72px;
-  position: relative;
-  z-index: 4;
+.guatemala-flag-image {
+  width: 100%;
+  height: 100%;
   display: block;
-  filter: drop-shadow(0 8px 12px rgba(5, 29, 73, 0.28));
-  animation: marimbaFloat 3s ease-in-out infinite;
-}
-
-.marimba-volcano,
-.marimba-leaf {
-  fill: rgba(255, 255, 255, 0.18);
-}
-
-.marimba-base {
-  fill: #8b4b16;
-}
-
-.marimba-decoration {
-  fill: none;
-  stroke: #ffcf7a;
-  stroke-width: 2;
-  stroke-linecap: round;
-}
-
-.bar {
-  fill: #c56b1c;
-  stroke: #ffb85c;
-  stroke-width: 1.2;
-}
-
-.bar-1,
-.bar-5 {
-  fill: #b85f18;
-}
-
-.bar-2,
-.bar-4 {
-  fill: #c96f20;
-}
-
-.bar-3 {
-  fill: #d47a24;
-}
-
-.tube {
-  fill: #f3a328;
-  stroke: #d78016;
-  stroke-width: 1;
-}
-
-.tube-2,
-.tube-3,
-.tube-4 {
-  fill: #ffb638;
-}
-
-.stick {
-  stroke: #f7d7a0;
-  stroke-width: 4;
-  stroke-linecap: round;
-}
-
-.mallet {
-  fill: #fff0c7;
-  stroke: #d9a64b;
-  stroke-width: 1.2;
+  object-fit: cover;
+  border-radius: inherit;
+  position: relative;
+  z-index: 1;
 }
 
 /* Tarjetas */
@@ -592,8 +525,8 @@ ion-content {
   display: inline-flex;
   padding: 7px 12px;
   border-radius: 999px;
-  background: #ffe1ec;
-  color: #c93663;
+  background: #fff2c9;
+  color: #9a6700;
   font-size: 10px;
   font-weight: 900;
 }
@@ -647,7 +580,9 @@ ion-content {
 }
 
 .btn-1500 {
-  background: linear-gradient(135deg, #ff5f6d, #f03d73);
+  background: linear-gradient(135deg, #ffc83d, #f1a208);
+  color: #083b85;
+  box-shadow: 0 12px 22px rgba(241, 162, 8, 0.24);
 }
 
 .btn-2290 {
@@ -769,7 +704,7 @@ ion-content {
 }
 
 /* Animaciones */
-@keyframes marimbaIconFloat {
+@keyframes flagIconFloat {
   0%,
   100% {
     transform: translateY(0);
@@ -782,37 +717,14 @@ ion-content {
   }
 }
 
-@keyframes marimbaFloat {
+@keyframes flagWave {
   0%,
   100% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0) rotate(0deg) skewY(0deg);
   }
 
   50% {
-    transform: translateY(-4px) rotate(-1deg) scale(1.06);
-  }
-}
-
-@keyframes marimbaGlowPulse {
-  0%,
-  100% {
-    opacity: 0.65;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.12);
-  }
-}
-
-@keyframes marimbaRingSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
+    transform: translateY(-3px) rotate(-1.2deg) skewY(-1deg);
   }
 }
 
@@ -872,24 +784,16 @@ ion-content {
   }
 
   .hero-icon {
-    width: 68px;
-    height: 68px;
+    width: 74px;
+    height: 74px;
     border-radius: 22px;
   }
 
-  .marimba-svg {
-    width: 60px;
-    height: 60px;
-  }
-
-  .marimba-ring {
+  .guatemala-flag-icon {
     width: 74px;
-    height: 74px;
-  }
-
-  .marimba-glow {
-    width: 84px;
-    height: 84px;
+    height: 50px;
+    flex-basis: 74px;
+    border-radius: 14px;
   }
 
   .quick-card,

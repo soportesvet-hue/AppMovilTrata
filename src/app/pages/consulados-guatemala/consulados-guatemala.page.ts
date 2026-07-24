@@ -90,7 +90,7 @@ export class ConsuladosGuatemalaPage {
       inicio: 'Inicio',
       denuncia: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
       acerca: 'Acerca de',
     },
 
@@ -120,7 +120,7 @@ export class ConsuladosGuatemalaPage {
       inicio: 'Home',
       denuncia: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
       acerca: 'About',
     },
   };

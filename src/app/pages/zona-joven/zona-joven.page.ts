@@ -381,7 +381,7 @@ export class ZonaJovenPage {
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
     },
 
     en: {
@@ -558,7 +558,7 @@ export class ZonaJovenPage {
       inicio: 'Home',
       denunciaNav: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
     },
   };
 

@@ -80,7 +80,7 @@ export class InformacionPage {
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
       acerca: 'Acerca de',
     },
 
@@ -100,7 +100,7 @@ export class InformacionPage {
       inicio: 'Home',
       denunciaNav: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
       acerca: 'About',
     },
   };
