@@ -50,7 +50,7 @@ export class PrivacidadPage {
 
       queEsTitulo: '¿Qué es esta app?',
       queEsTexto:
-        'Contigo GT es una aplicación informativa y preventiva que brinda orientación básica sobre trata de personas, señales de alerta y canales de apoyo disponibles.',
+        'Es una aplicación informativa y preventiva que brinda orientación básica sobre trata de personas, señales de alerta y canales de apoyo disponibles.',
 
       finalidadTitulo: '¿Para qué fue creada?',
       finalidadTexto:
@@ -83,7 +83,7 @@ export class PrivacidadPage {
 
       queEsTitulo: 'What is this app?',
       queEsTexto:
-        'Contigo GT is an informational and prevention app that provides basic guidance about human trafficking, warning signs and available support channels.',
+        'Is an informational and prevention app that provides basic guidance about human trafficking, warning signs and available support channels.',
 
       finalidadTitulo: 'Why was it created?',
       finalidadTexto:
