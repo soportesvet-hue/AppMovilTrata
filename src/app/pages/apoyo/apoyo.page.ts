@@ -38,17 +38,17 @@ export class ApoyoPage {
 
   textos: Record<Lang, ApoyoTextos> = {
     es: {
-      titulo: 'Apoyo',
+      titulo: 'Consejo y asesoría',
       etiqueta: 'ORIENTACIÓN',
       subtitulo:
         'Recibe orientación segura y accede a información preventiva de Modo Digital.',
-      whatsappTitulo: 'Chat de consejería',
+      whatsappTitulo: 'Chat de consejería y asesoría',
       whatsappTexto:
-        'Este es el número de WhatsApp para solicitar orientación y apoyo.',
+        'Este es el número de WhatsApp para solicitar orientación y consejería.',
       whatsappBoton: 'WhatsApp 2504-8888',
       webTitulo: 'Modo Digital',
       webTexto:
-        'Ingresa a la página web para conocer información preventiva y recursos digitales.',
+        'Ingresa a la página web para conocer información y recursos digitales para reducir delitos de explotación sexual en linea.',
       webBoton: 'Ir a Modo Digital',
       denunciaTexto:
         'Si estás en riesgo o conoces un caso, utiliza la sección de denuncia.',
@@ -57,20 +57,20 @@ export class ApoyoPage {
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
     },
     en: {
-      titulo: 'Support',
+      titulo: 'Advice and counsel',
       etiqueta: 'GUIDANCE',
       subtitulo:
         'Receive safe guidance and access prevention information from Digital Mode.',
-      whatsappTitulo: 'Counseling chat',
+      whatsappTitulo: 'Counseling and advisory chat',
       whatsappTexto:
-        'This is the WhatsApp number to request guidance and support.',
+        'This is the WhatsApp number to request guidance and counseling.',
       whatsappBoton: 'WhatsApp 2504-8888',
       webTitulo: 'Digital Mode',
       webTexto:
-        'Visit the website to learn prevention information and digital resources.',
+        'Visit the website to learn about information and digital resources to reduce online sexual exploitation crimes.',
       webBoton: 'Go to Digital Mode',
       denunciaTexto:
         'If you are at risk or know of a case, use the report section.',
@@ -79,7 +79,7 @@ export class ApoyoPage {
       inicio: 'Home',
       denunciaNav: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
     },
   };
 

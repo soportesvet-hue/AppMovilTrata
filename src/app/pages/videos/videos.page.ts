@@ -123,7 +123,7 @@ export class VideosPage {
 
   textos: Record<Lang, VideosTextos> = {
     es: {
-      titulo: 'Videos',
+      titulo: 'Toma Conciencia',
       subtitulo: 'Material audiovisual para informarte y reconocer señales de riesgo.',
       etiqueta: 'PREVENCIÓN',
       avisoTitulo: 'Nota',
@@ -133,11 +133,11 @@ export class VideosPage {
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
     },
 
     en: {
-      titulo: 'Videos',
+      titulo: 'Become aware',
       subtitulo: 'Audiovisual material to learn and recognize warning signs.',
       etiqueta: 'PREVENTION',
       avisoTitulo: 'Note',
@@ -147,7 +147,7 @@ export class VideosPage {
       inicio: 'Home',
       denunciaNav: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
     },
   };
 

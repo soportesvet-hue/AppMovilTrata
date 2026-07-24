@@ -73,7 +73,7 @@ export class PrivacidadPage {
       inicio: 'Inicio',
       denuncia: 'Denuncia',
       info: 'Info',
-      apoyo: 'Apoyo',
+      apoyo: 'Consejo y asesoria',
     },
 
     en: {
@@ -106,7 +106,7 @@ export class PrivacidadPage {
       inicio: 'Home',
       denuncia: 'Report',
       info: 'Info',
-      apoyo: 'Support',
+      apoyo: 'Advice and counsel',
     },
   };
 
