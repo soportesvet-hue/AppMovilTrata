@@ -588,3 +588,31 @@ ion-content {
     }
   }
 }
+
+
+/* Ajustes para datos oficiales MINEX */
+.country-info small {
+  display: inline-flex;
+  margin-top: 5px;
+  color: #0d4ea6;
+  font-size: 12px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.official-box {
+  background:
+    radial-gradient(circle at 96% 10%, rgba(255, 210, 60, 0.18), transparent 32%),
+    linear-gradient(135deg, #fffdf4, #ffffff);
+  border-color: #ffe29c;
+}
+
+.minex-btn {
+  background: linear-gradient(135deg, #0d4ea6, #1e88e5);
+  margin-top: 2px;
+}
+
+.secondary-map-btn {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #20a8ef, #0876d4);
+}

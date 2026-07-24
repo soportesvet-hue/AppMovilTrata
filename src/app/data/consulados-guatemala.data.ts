@@ -1,426 +1,485 @@
 export interface ConsuladoGuatemala {
   pais: string;
-  ciudad: string;
   nombre: string;
-  direccion: string;
-  telefonos: string;
-  correo: string;
-  maps: string;
+  enlace: string;
+  ciudad?: string;
+  direccion?: string;
+  telefonos?: string | string[];
+  correo?: string | string[];
+  horario?: string;
+  jurisdiccion?: string;
+  mapa?: string;
 }
 
 export const CONSULADOS_GUATEMALA: ConsuladoGuatemala[] = [
   {
-    pais: `Belice`,
-    ciudad: `Benque Viejo del Carmen`,
-    nombre: `Consulado de Guatemala en Benque Viejo del Carmen`,
-    direccion: `Lote No. 2774 George Price Boulevard, Benque Viejo del Carmen, Distrito del Cayo, Belice`,
-    telefonos: `(00-501) 823-2188 -89`,
-    correo: `consbenqueviejo@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/8v9K8ocC1wyB537bA`,
+    "pais": "Alemania",
+    "nombre": "Consulado Honorario de Guatemala en Düsseldorf",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/213"
   },
   {
-    pais: `Canadá`,
-    ciudad: `Montreal`,
-    nombre: `Consulado de Guatemala en Montreal`,
-    direccion: `1255 Boul. Robert-Bourassa, Bureau 510, Montreal, QC, H3B 3V6`,
-    telefonos: `514-397-2348 Teléfono Emergencia Consular: 514-799-0639 Teléfono Emergencia Trabajadores: 514-451-5512`,
-    correo: `consmontreal@minex.gob.gt / consulargtmontreal@minex.gob.gt / trabajadoresgtmontreal@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/V8ptA6W7oezJxU8L6`,
+    "pais": "Alemania",
+    "nombre": "Consulado Honorario de Guatemala en Hamburgo",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/224"
   },
   {
-    pais: `Canadá`,
-    ciudad: `Toronto`,
-    nombre: `Consulado de Guatemala en Toronto`,
-    direccion: `110 Sheppard Ave. E. Suite 200, North York, ON, Canadá M2N6Y8`,
-    telefonos: `437-561-1011`,
-    correo: `constoronto@minex.gob.gt / documentaciontoronto@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/V8ptA6W7oezJxU8L6`,
+    "pais": "Alemania",
+    "nombre": "Consulado Honorario de Guatemala en Múnich",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/270"
   },
   {
-    pais: `Canadá`,
-    ciudad: `Vancouver`,
-    nombre: `Consulado de Guatemala en Vancouver`,
-    direccion: `1188 West Georgia Street, Suite 1270 Vancouver, BC, V6E 4A2`,
-    telefonos: `+1 604-412-2401`,
-    correo: `consvancouver@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/cXSyowT25Dt6jCW88`,
+    "pais": "Armenia",
+    "nombre": "Consulado Honorario de Guatemala en Everán Armenia",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/181"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Dallas`,
-    nombre: `Consulado de Guatemala en Dallas`,
-    direccion: `4405 N BELTWOOD PARKWAY FARMERS BRANCH, TEXAS 75244`,
-    telefonos: `469 886 9922; Emergencia: 682 431 7334`,
-    correo: `consdallas@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/z7X1pYrLh3vBLzW49`,
+    "pais": "Australia",
+    "nombre": "Consulado Honorario de Guatemala en Melbourne",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/261"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Del Río`,
-    nombre: `Consulado de Guatemala en Del Río`,
-    direccion: `106 Foster Drive del Río, TX 78840`,
-    telefonos: `(830) 422-2201; 422-2230; 308-3870 Emergencia: (830) 313-7239`,
-    correo: `consdelrio@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/eJznbbc3teA5kTJH8`,
+    "pais": "Australia",
+    "nombre": "Consulado Honorario de Guatemala en Sidney",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/295"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Lake Worth`,
-    nombre: `Consulado de Guatemala en Lake Worth`,
-    direccion: `1926 10th Avenue North, suite 104-106, Lake Worth, Florida 33461`,
-    telefonos: `001-561660-6223 - 001-561660-6261`,
-    correo: `conslakeworth@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/x6mGYRLPLgkzXihBA`,
+    "pais": "Austria",
+    "nombre": "Consulado Honorario de Guatemala en Innsbruck",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/227"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `McAllen`,
-    nombre: `Consulado de Guatemala en McAllen`,
-    direccion: `705 South Broadway Street McAllen, Texas 78501`,
-    telefonos: `(001-956) 429-3413`,
-    correo: `consmcallen@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/TmWp6gGrUc4SGVTW7`,
+    "pais": "Austria",
+    "nombre": "Consulado Honorario de Guatemala en Sankt Pölten, Baja Austria",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/287"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Riverhead`,
-    nombre: `Consulado de Guatemala en Riverhead`,
-    direccion: `1333 East Main Street, Suite 1, Riverhead, NY 11901`,
-    telefonos: `(631) 405-5010`,
-    correo: `consriverhead@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/Vv1Z9DQMUtuJWEWj9`,
+    "pais": "Bangladesh",
+    "nombre": "Consulado Honorario De Guatemala En Daca",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/210"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `San Bernardino`,
-    nombre: `Consulado de Guatemala en San Bernardino`,
-    direccion: `330 N "D" Street San Bernardino, CA 92401`,
-    telefonos: `(001-909) 572-8800`,
-    correo: `conssanbernardino@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/4mDi8ns6Ro8MZaUSA`,
+    "pais": "Belarús",
+    "nombre": "Consulado Honorario de Guatemala en Minsk",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/265"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Tucson`,
-    nombre: `Consulado de Guatemala en Tucson`,
-    direccion: `100 North Stone Avenue, Suite 704, Tucson, Arizona 85701`,
-    telefonos: `(001) 520-3986912 / 520-3987193 / 520-3987301 / 520-3987307 Teléfono de Emergencia: (001) (520) 433-0667`,
-    correo: `constucson@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/G1WYFiotZHBJDtac7`,
+    "pais": "Bolivia (Estado Plurinacional de Bolivia)",
+    "nombre": "Consulado Honorario de Guatemala en la Paz",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/255"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Atlanta`,
-    nombre: `Consulado de Guatemala en Atlanta`,
-    direccion: `192 Technology Parkway, suite 150, Peachtree Corners, Georgia, 30092`,
-    telefonos: `470-657-2510 Emergencias: 404-398-9298`,
-    correo: `consatlanta@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/G1WYFiotZHBJDtac7`,
+    "pais": "Bolivia (Estado Plurinacional de Bolivia)",
+    "nombre": "Consulado Honorario de Guatemala en Santa Cruz de la Sierra",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/288"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Chicago`,
-    nombre: `Consulado de Guatemala en Chicago`,
-    direccion: `5559 N Elston Ave. Suite # 100 Chicago, IL 60630`,
-    telefonos: `+312-540-0781`,
-    correo: `conschicago@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/fKtQUqB2QKRWK2UY8`,
+    "pais": "Brasil",
+    "nombre": "Consulado Honorario de Guatemala en Bello Horizonte",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/189"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Columbus`,
-    nombre: `Consulado de Guatemala en Columbus`,
-    direccion: `2105 S. Hamilton Rd Suite #100 Columbus, Ohio. 43232`,
-    telefonos: `(614) 762-8119 Emergencia: (614) 897-3208`,
-    correo: `consohio@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/oo41QfSptNRM7ndj9`,
+    "pais": "Brasil",
+    "nombre": "Consulado Honorario de Guatemala en Porto Alegre",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/279"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Denver`,
-    nombre: `Consulado de Guatemala en Denver`,
-    direccion: `1001 S. Monaco Parkway Suite 101 Denver, CO 80224`,
-    telefonos: `(001-303) 629-9212`,
-    correo: `consdenver@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/GZRPpr3SLViC7RqPA`,
+    "pais": "Brasil",
+    "nombre": "Consulado Honorario de Guatemala en Recife",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/284"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Seattle`,
-    nombre: `Consulado de Guatemala en Seattle`,
-    direccion: `711 Powell Avenue SW, Renton, WA 98057`,
-    telefonos: `(564) 241-1480 Emergencia: (206) 271-5309`,
-    correo: `consseattle@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/N3Nmkh2xxyPxsDD49`,
+    "pais": "Brasil",
+    "nombre": "Consulado Honorario de Guatemala en Salvador de Bahía",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/285"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Houston`,
-    nombre: `Consulado de Guatemala en Houston`,
-    direccion: `11222 Richmond Ave. Suite 180, Houston, TX 77082 Houston, Texas, Estados Unidos de América`,
-    telefonos: `(001-713) 953-9531 Emergencia: 832-8087358`,
-    correo: `conshouston@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/aNUZSHteowFNcpQ56`,
+    "pais": "Bulgaria",
+    "nombre": "Consulado Honorario de Guatemala en Sofía",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/298"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Las Vegas`,
-    nombre: `Consulado de Guatemala en Las Vegas`,
-    direccion: `3785 E Sunset Road, Las Vegas, NV 89120`,
-    telefonos: `(702) 605-5420`,
-    correo: `consnevada@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/xzTwX3vya81Y6QjCA`,
+    "pais": "Bélgica",
+    "nombre": "Consulado Honorario de Guatemala en Gante",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/216"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Los Ángeles`,
-    nombre: `Consulado de Guatemala en Los Ángeles`,
-    direccion: `1975 Riverside Dr., Los Ángeles, California 90039`,
-    telefonos: `(213) 900-1098 Emergencia opción 2`,
-    correo: `conslosangeles@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/TR53YPhfnBTUHGyn7`,
+    "pais": "Bélgica",
+    "nombre": "Consulado Honorario de Guatemala en la Hulpe",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/254"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Maryland / Rockville`,
-    nombre: `Consulado de Guatemala en Maryland / Rockville`,
-    direccion: `979 Rollins Avenue Rockville, MD 20852`,
-    telefonos: `(240) 485-5050 Whatsapp: (240) 485-5049`,
-    correo: `consmaryland@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/Pt9pfiZtsJqj8Y5M8`,
+    "pais": "Bélgica",
+    "nombre": "Consulado Honorario de Guatemala en Luxemburgo",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/258"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Miami`,
-    nombre: `Consulado de Guatemala en Miami`,
-    direccion: `Ponce De León Blvd, Suite 100, Coral Gables, FL 33134`,
-    telefonos: `305 679-9945/46`,
-    correo: `consmiami@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/SK5zuWzEUA1nJSqs6`,
+    "pais": "Canadá",
+    "nombre": "Consulado Honorario de Guatemala en Halifax, Nueva Escocia Canadá",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/222"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Nashville`,
-    nombre: `Consulado de Guatemala en Nashville`,
-    direccion: `1645 Murfreesboro Pike, Suite M, Nashville, TN 37217`,
-    telefonos: `(615) 988-8624, (615) 988-8626, (615) 988-8627`,
-    correo: `consnashville@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/bk7mNEAz6f6sakgU6`,
+    "pais": "Chile",
+    "nombre": "Consulado Honorario de Guatemala en Santiago",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/460"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Nueva York`,
-    nombre: `Consulado de Guatemala en Nueva York`,
-    direccion: `276 Park Avenue South, 2do piso New York, New York, 10010`,
-    telefonos: `(001-212) 686-3837`,
-    correo: `consnewyork@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/K7NN8DS8ZGPcyq6R8`,
+    "pais": "Chipre",
+    "nombre": "Consulado Honorario de Guatemala en Nicosia",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/272"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Oklahoma City`,
-    nombre: `Consulado de Guatemala en Oklahoma City`,
-    direccion: `5909 NW Expressway Suite 100 Oklahoma City, Oklahoma 73132`,
-    telefonos: `405 603 6631 405 603 6638`,
-    correo: `consoklahoma@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/8Pt9n2kyFNrLpYk67`,
+    "pais": "Colombia",
+    "nombre": "Consulado Honorario de Guatemala en Cartagena de Indias",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/201"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Omaha`,
-    nombre: `Consulado de Guatemala en Omaha`,
-    direccion: `1010 N 96th St Suite 200, Omaha, NE 68114`,
-    telefonos: `(531) 910-0230 y (531) 910-0231 Telefono de Emergencia: (531) 910-0236`,
-    correo: `consomaha@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/8ioQUyjcaYetNfyu9`,
+    "pais": "Ecuador",
+    "nombre": "Consulado Honorario de Guatemala en Cuenca",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/208"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Philadelphia`,
-    nombre: `Consulado de Guatemala en Philadelphia`,
-    direccion: `417 N 8th Street Suite 201 Philadelphia, PA. 19123`,
-    telefonos: `001 (267) 3222044`,
-    correo: `consphiladelphia@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/9PKAqoQoemf1MYgq6`,
+    "pais": "Ecuador",
+    "nombre": "Consulado Honorario de Guatemala en Guayaquil",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/240"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Phoenix`,
-    nombre: `Consulado de Guatemala en Phoenix`,
-    direccion: `55 East Thomas Road, 3rd Floor, Phoenix, Arizona, 85012`,
-    telefonos: `001 (602) 200-3660 / 001 (602) 200-3662 / 001 (602) 819-7133`,
-    correo: `consphoenix@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/pe1y7CGztHsAQbqu5`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Alicante",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/21"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Providence`,
-    nombre: `Consulado de Guatemala en Providence`,
-    direccion: `555 Valley Street, Edificio 61-321 Providence, Rhode Island 02908`,
-    telefonos: `(401) 270-6345 / (401) 270-6374 Emergencias: 401-3913255`,
-    correo: `consrhodeisland@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/G1WYFiotZHBJDtac7`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Barcelona",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/185"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `Raleigh`,
-    nombre: `Consulado de Guatemala en Raleigh`,
-    direccion: `6050 Six Forks Rd. Raleigh, North Carolina 27609`,
-    telefonos: `001 (984) 200-1601 / (984) 200-2411`,
-    correo: `consraleigh@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/YRDj4cVgDMMkSHAdA`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en las Palmas de Gran Canaria",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/256"
   },
   {
-    pais: `Estados Unidos`,
-    ciudad: `San Francisco`,
-    nombre: `Consulado de Guatemala en San Francisco`,
-    direccion: `659 A Merchant Street, San Francisco, Ca. 94111`,
-    telefonos: `(001-415) 563-8319`,
-    correo: `conssanfrancisco@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/uJpXSsHfRcwbfVJ47`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Murcia",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/271"
   },
   {
-    pais: `México`,
-    ciudad: `Arriaga`,
-    nombre: `Consulado de Guatemala en Arriaga`,
-    direccion: `4ta Avenida Poniente Número 6 "A" entre Central Norte y 2da Norte, Colonia Centro, Arriaga, Estado de Chiapas, Estados Unidos Mexicanos`,
-    telefonos: `(0052) 966-6620025`,
-    correo: `agenarriaga@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/cH7huzszDTzoKhwu9`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Santa Cruz Tenerife, Islas Canarias",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/289"
   },
   {
-    pais: `México`,
-    ciudad: `Ciudad Hidalgo`,
-    nombre: `Consulado de Guatemala en Ciudad Hidalgo`,
-    direccion: `Edificio numero dos (2) primer nivel, interior No.1, Plaza Karli, Avenida Central Norte entre 5a y 7a Calle Poniente, Ciudad Hidalgo, Chiapas, Estanos Unidos Mexicanos`,
-    telefonos: `(+52) 962-688-9605`,
-    correo: `conshidalgo@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/s3FcbJscBNqw36Jp7`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Sevilla",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/293"
   },
   {
-    pais: `México`,
-    ciudad: `Comitán de Domínguez`,
-    nombre: `Consulado de Guatemala en Comitán de Domínguez`,
-    direccion: `1ª. Calle Sur Poniente, No.35-5, Barrio Guadalupe, Comitán de Domínguez, Chiapas, 30020.`,
-    telefonos: `(0052) 963-1106816, 963-1108083`,
-    correo: `conscomitan@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/oazLVXVtnruzPnzr7`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Valencia",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/303"
   },
   {
-    pais: `México`,
-    ciudad: `Acayucan`,
-    nombre: `Consulado de Guatemala en Acayucan`,
-    direccion: `Avenida Independencia No.609, esquina Altamirano, Barrio Zapotal, Acayucan, Veracruz, México. C.P.96039`,
-    telefonos: `(00-52) 924-2449156`,
-    correo: `consacayucan@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/X3DAozEg4E1F7tVd7`,
+    "pais": "España",
+    "nombre": "Consulado Honorario de Guatemala en Zaragoza",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/307"
   },
   {
-    pais: `México`,
-    ciudad: `Cancún`,
-    nombre: `Consulado de Guatemala en Cancún`,
-    direccion: `Avenida Tulum Número 318, Supermanzana 9, Manzana 2, Lote 2, Oficina 07 a la 14 planta baja, Centro Corporativo Cancún, Cancún, Quintana Roo, Estados Unidos Mexicanos, código postal 77503`,
-    telefonos: `(0052) 998-210-9219 / 998-802-2926 Emergencia: (0052)998-259-4428`,
-    correo: `conscancun@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/TZSsLcZaJK2zxZkB6`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Birmingham, Alabama",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/190"
   },
   {
-    pais: `México`,
-    ciudad: `Ciudad de México`,
-    nombre: `Consulado de Guatemala en Ciudad de México`,
-    direccion: `Avenida Insurgentes Sur 667 Colonia Nápoles, Benito Juárez 03810, Ciudad de México`,
-    telefonos: `(0052) 55-5682-9760`,
-    correo: `consmexico@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/SqciEXT1nWNj7Xu99`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Johnson City, Tennessee",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/246"
   },
   {
-    pais: `México`,
-    ciudad: `Ciudad Juárez`,
-    nombre: `Consulado de Guatemala en Ciudad Juárez`,
-    direccion: `Edificio Atlantis Av. Paseo Triunfo de la República 3340, Colonia Partido Escobedo, Código Postal No. 32330, Ciudad Juárez, Chihuahua`,
-    telefonos: `656 685 1908 y 656 689 9038`,
-    correo: `consjuarez@mingex.gob.gt`,
-    maps: `https://maps.app.goo.gl/z9j7UVbvcE6xYPts7`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en la ciudad de Chattanooga, Tennessee",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/19"
   },
   {
-    pais: `México`,
-    ciudad: `Monterrey`,
-    nombre: `Consulado de Guatemala en Monterrey`,
-    direccion: `Avenida Miguel Hidalgo No. 330, Centro Cuauhtémoc, oficinas 622 y 623, Código Postal 64000, Centro Monterrey, Nuevo León, Estados Unidos Mexicanos`,
-    telefonos: `818 3404 569; / 818 3406 947; / 818 3446 947`,
-    correo: `Consmonterrey@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/xthW94U8UHGqMSRP9`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Memphis, Tennessee",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/263"
   },
   {
-    pais: `México`,
-    ciudad: `Oaxaca`,
-    nombre: `Consulado de Guatemala en Oaxaca`,
-    direccion: `Calle Belisario Domínguez, No. 1213, Colonia Reforma, Oaxaca de Juárez, Oaxaca, C.P. 68050`,
-    telefonos: `+52 (951) 132-59-49`,
-    correo: `consoaxaca@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/vsuaUTFmnQKbUr9v7`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Orem, Utah",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/455"
   },
   {
-    pais: `México`,
-    ciudad: `San Luis Potosí`,
-    nombre: `Consulado de Guatemala en San Luis Potosí`,
-    direccion: `Avenida Venustiano Carranza No. 2170, Esquina con Miguel de Cervantes, Colonia Polanco, C.P. 78220, San Luis Potosí, S.L.P., Estados Unidos Mexicanos`,
-    telefonos: `(0052) 444 6890317, (0052)444 1803173, (0052) 444 1803174 y (00502)24100000 extensión 8620, 8621 y 8622`,
-    correo: `sanluispotosi@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/D9J1s8pfzBmtVcmJ6`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Petaluma, California",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/274"
   },
   {
-    pais: `México`,
-    ciudad: `Tapachula`,
-    nombre: `Consulado de Guatemala en Tapachula`,
-    direccion: `5a. Norte No. 67, entre 11 y 13 oriente Colonia Centro, Tapachula, Chiapas Código Postal: 30700`,
-    telefonos: `(00-52) 962-6261252 Emergencia: (00-52) 962-6883777`,
-    correo: `constapachula@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/NuJADfXNAuYfpAVTA`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Portland, Oregon",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/278"
   },
   {
-    pais: `México`,
-    ciudad: `Tenosique`,
-    nombre: `Consulado de Guatemala en Tenosique`,
-    direccion: `Calle 23x26, Local 1, Segundo nivel, frente al Parque Central, Colonia Centro Tenosique, Tabasco 86901.`,
-    telefonos: `(00-52) 934-3424249`,
-    correo: `constenosique@minex.gob.gt / tenosique@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/a3b6XnwFNSFT6D5D8`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en San Francisco",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/434"
   },
   {
-    pais: `México`,
-    ciudad: `Tijuana`,
-    nombre: `Consulado de Guatemala en Tijuana`,
-    direccion: `Dr Atl #2084, Torre Zentrum Interior 301, Zona Urbana Río Tijuana.`,
-    telefonos: `(0052-664) 9007148 / 9007208`,
-    correo: `constijuana@minex.gob.gt / protecciontijuana@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/jiJLW3v7qd9EVEYQ9`,
+    "pais": "Estados Unidos de América",
+    "nombre": "Consulado Honorario de Guatemala en Wisconsin",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/305"
   },
   {
-    pais: `México`,
-    ciudad: `Tuxtla Gutiérrez`,
-    nombre: `Consulado de Guatemala en Tuxtla Gutiérrez`,
-    direccion: `Calle Pencil 1-B Colonia Los Choferes Tuxtla Gutiérrez, Chiapas, México. C.P. 29078`,
-    telefonos: `(0052) 961 - 1212235 y (0052) 961 - 1180887`,
-    correo: `constuxtla@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/JWvYfdJ8p9v6dR5E9`,
+    "pais": "Estados Unidos Mexicanos",
+    "nombre": "Consulado Honorario de Guatemala en Baja California Sur",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/184"
   },
   {
-    pais: `Honduras`,
-    ciudad: `San Pedro Sula`,
-    nombre: `Consulado de Guatemala en San Pedro Sula`,
-    direccion: `23 Avenida, entre 11 y 12 calle, Colonia Trejo, San Pedro Sula, Honduras`,
-    telefonos: `(00-504) 2556-9550/ 2556-9551`,
-    correo: `conssanpedsula@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/oH4VNGpMePgCu5VQ9`,
+    "pais": "Estados Unidos Mexicanos",
+    "nombre": "Consulado Honorario de Guatemala en Guadalajara",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/218"
   },
   {
-    pais: `Marruecos`,
-    ciudad: `Dakhla`,
-    nombre: `Consulado de Guatemala en Dakhla`,
-    direccion: `Avenue Al Walae No. 21 Código Postal 73000, Ciudad de Dakhla, Reino de Marruecos`,
-    telefonos: `Temporal: (212) 764043815`,
-    correo: `wcordon@minex.gob.gt`,
-    maps: `https://maps.app.goo.gl/Er8WeSR5FUQnmWSa8`,
+    "pais": "Estados Unidos Mexicanos",
+    "nombre": "Consulado Honorario de Guatemala en Playas de Rosarito, Baja California",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/332"
   },
+  {
+    "pais": "Estados Unidos Mexicanos",
+    "nombre": "Consulado Honorario de Guatemala en Puebla",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/282"
+  },
+  {
+    "pais": "Estonia",
+    "nombre": "Consulado Honorario de Guatemala en Tallin",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/299"
+  },
+  {
+    "pais": "Finlandia",
+    "nombre": "Consulado Honorario de Guatemala en Helsinki",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/225"
+  },
+  {
+    "pais": "Francia",
+    "nombre": "Consulado Honorario de Guatemala en Lyon",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/259"
+  },
+  {
+    "pais": "Francia",
+    "nombre": "Consulado Honorario de Guatemala en Mónaco",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/268"
+  },
+  {
+    "pais": "Francia",
+    "nombre": "Consulados Honorario de Guatemala en Burdeos",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/195"
+  },
+  {
+    "pais": "Georgia",
+    "nombre": "Consulado Honorario de Guatemala en Tiflis",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/301"
+  },
+  {
+    "pais": "Grecia",
+    "nombre": "Consulado Honorario de Guatemala en Atenas",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/183"
+  },
+  {
+    "pais": "Grecia",
+    "nombre": "Consulado Honorario de República de Grecia",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/309"
+  },
+  {
+    "pais": "Haití",
+    "nombre": "Consulado Honorario de Guatemala en Puerto Príncipe",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/283"
+  },
+  {
+    "pais": "Haití",
+    "nombre": "Consulado Honorario de República de Haití",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/310"
+  },
+  {
+    "pais": "Hungría",
+    "nombre": "Consulado Honorario de Guatemala en Budapest",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/194"
+  },
+  {
+    "pais": "India",
+    "nombre": "Consulado Honorario de Guatemala en Calcuta",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/198"
+  },
+  {
+    "pais": "India",
+    "nombre": "Consulado Honorario de Guatemala en Chennai",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/204"
+  },
+  {
+    "pais": "India",
+    "nombre": "Consulado Honorario de Guatemala en Mumbai",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/269"
+  },
+  {
+    "pais": "Irlanda",
+    "nombre": "Consulado Honorario de Guatemala en Dublin",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/211"
+  },
+  {
+    "pais": "Israel",
+    "nombre": "Consulado Honorario de Guatemala en Haifa",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/221"
+  },
+  {
+    "pais": "Israel",
+    "nombre": "Consulado Honorario de Guatemala en Modi'in Region",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/267"
+  },
+  {
+    "pais": "Israel",
+    "nombre": "Consulado Honorario de Guatemala en Tel Aviv",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/300"
+  },
+  {
+    "pais": "Italia",
+    "nombre": "Consulado Honorario de Guatemala en Brindisi",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/191"
+  },
+  {
+    "pais": "Italia",
+    "nombre": "Consulado Honorario de Guatemala en Milán",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/264"
+  },
+  {
+    "pais": "Italia",
+    "nombre": "Consulado Honorario de Guatemala en Módena",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/266"
+  },
+  {
+    "pais": "Jamaica",
+    "nombre": "Consulado Honorario de Guatemala en Kingston",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/230"
+  },
+  {
+    "pais": "Japón",
+    "nombre": "Consulado Honorario de Guatemala en Kioto",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/251"
+  },
+  {
+    "pais": "Japón",
+    "nombre": "Consulado Honorario de Guatemala en Sapporo Hokkaido",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/292"
+  },
+  {
+    "pais": "Japón",
+    "nombre": "Consulado Honorario de Guatemala en Yokohama",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/306"
+  },
+  {
+    "pais": "Letonia",
+    "nombre": "Consulado Honorario de Guatemala en Riga, Letonia",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/433"
+  },
+  {
+    "pais": "Lituania",
+    "nombre": "Consulado Honorario de Guatemala en Vilnius",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/304"
+  },
+  {
+    "pais": "Líbano",
+    "nombre": "Consulado Honorario de Guatemala en Beirut",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/186"
+  },
+  {
+    "pais": "Malasia",
+    "nombre": "Consulado Honorario de Guatemala en Kuala Lumpur",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/253"
+  },
+  {
+    "pais": "Marruecos",
+    "nombre": "Consulado de Guatemala en Tánger",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/429"
+  },
+  {
+    "pais": "Paraguay",
+    "nombre": "Consulado Honorario De Guatemala En Asunción",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/182"
+  },
+  {
+    "pais": "Perú",
+    "nombre": "Consulado Honorario de Guatemala en Arequipa",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/273"
+  },
+  {
+    "pais": "Perú",
+    "nombre": "Consulado Honorario de Guatemala en Cusco, Perú",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/387"
+  },
+  {
+    "pais": "Polonia",
+    "nombre": "Consulado Honorario de Guatemala en Poznan",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/280"
+  },
+  {
+    "pais": "Portugal",
+    "nombre": "Consulado Honorario de Guatemala en Lisboa",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/257"
+  },
+  {
+    "pais": "Reino Unido de Gran Bretaña e Irlanda del Norte",
+    "nombre": "Consulado Honorario de Guatemala en Belfast",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/187"
+  },
+  {
+    "pais": "República de Corea",
+    "nombre": "Consulado Honorario de Guatemala en Pohang",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/276"
+  },
+  {
+    "pais": "República de Corea",
+    "nombre": "Consulados Honorario de Guatemala en Busan",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/197"
+  },
+  {
+    "pais": "Rumania",
+    "nombre": "Consulado Honorario de Guatemala en Bucarest",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/193"
+  },
+  {
+    "pais": "Rusia",
+    "nombre": "Consulado Honorario de Guatemala en San Petersburgo",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/286"
+  },
+  {
+    "pais": "Singapur",
+    "nombre": "Consulado Honorario de Guatemala en Singapur",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/296"
+  },
+  {
+    "pais": "Sri Lanka",
+    "nombre": "Consulado Honorario de Guatemala en Colombo",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/206"
+  },
+  {
+    "pais": "Sudáfrica",
+    "nombre": "Consulado Honorario de Guatemala en el Cabo",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/214"
+  },
+  {
+    "pais": "Suecia",
+    "nombre": "Consulado Honorario de Guatemala en la ciudad de Linköping",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/339"
+  },
+  {
+    "pais": "Türkiye",
+    "nombre": "Consulado Honorario de Guatemala en Izmir",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/430"
+  },
+  {
+    "pais": "Ucrania",
+    "nombre": "Consulado Honorario de Guatemala en Kiev",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/249"
+  },
+  {
+    "pais": "Venezuela (República Bolivariana de Venezuela)",
+    "nombre": "Consulado Honorario de Guatemala en Maracaibo",
+    "enlace": "https://www.minex.gob.gt/detalle_sede/260"
+  }
 ];

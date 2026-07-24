@@ -22,12 +22,15 @@ interface TextosConsulados {
   buscadorPais: string;
   buscadorConsulado: string;
   verConsulados: string;
+  consuladoSingular: string;
+  consuladosPlural: string;
   resultados: string;
   volverPaises: string;
   sinResultados: string;
   fuenteTitulo: string;
   fuenteTexto: string;
   fuenteBoton: string;
+  fichaMinex: string;
   direccion: string;
   telefonos: string;
   correo: string;
@@ -62,18 +65,21 @@ export class ConsuladosGuatemalaPage {
 
   textos: Record<Lang, TextosConsulados> = {
     es: {
-      titulo: 'Consulados de Guatemala',
+      titulo: 'Consulados Honorarios de Guatemala',
       etiqueta: 'GUATEMALA EN EL EXTERIOR',
       subtitulo: 'Directorio de consulados de Guatemala en el extranjero.',
       buscadorPais: 'Buscar país',
-      buscadorConsulado: 'Buscar país, ciudad, dirección o correo',
+      buscadorConsulado: 'Buscar país o nombre del consulado',
       verConsulados: 'Ver consulados en el país',
+      consuladoSingular: 'consulado',
+      consuladosPlural: 'consulados',
       resultados: 'resultados',
       volverPaises: 'Ver países',
       sinResultados: 'No se encontraron resultados.',
       fuenteTitulo: 'Fuente oficial MINEX',
-      fuenteTexto: 'Ver directorio oficial en MINEX',
+      fuenteTexto: 'Información oficial publicada por el Ministerio de Relaciones Exteriores.',
       fuenteBoton: 'MINEX',
+      fichaMinex: 'Ver información oficial',
       direccion: 'Dirección',
       telefonos: 'Teléfonos',
       correo: 'Correo',
@@ -89,18 +95,21 @@ export class ConsuladosGuatemalaPage {
     },
 
     en: {
-      titulo: 'Guatemalan Consulates',
+      titulo: 'Honorary Consulates of Guatemala',
       etiqueta: 'GUATEMALA ABROAD',
       subtitulo: 'Directory of Guatemalan consulates abroad.',
       buscadorPais: 'Search country',
-      buscadorConsulado: 'Search country, city, address or email',
+      buscadorConsulado: 'Search country or consulate name',
       verConsulados: 'View consulates in this country',
+      consuladoSingular: 'consulate',
+      consuladosPlural: 'consulates',
       resultados: 'results',
       volverPaises: 'View countries',
       sinResultados: 'No results found.',
       fuenteTitulo: 'Official MINEX source',
-      fuenteTexto: 'View official directory on MINEX',
+      fuenteTexto: 'Official information published by the Ministry of Foreign Affairs.',
       fuenteBoton: 'MINEX',
+      fichaMinex: 'View official information',
       direccion: 'Address',
       telefonos: 'Phone numbers',
       correo: 'Email',
@@ -200,6 +209,7 @@ export class ConsuladosGuatemalaPage {
         this.obtenerCorreo(item),
         this.obtenerHorario(item),
         this.obtenerJurisdiccion(item),
+        this.obtenerEnlace(item),
       ].join(' ');
 
       return this.normalizar(contenido).includes(texto);
@@ -222,8 +232,28 @@ export class ConsuladosGuatemalaPage {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  abrirLink(url: string) {
-    void this.analytics.enlace('link_consulado_guatemala', url, 'consulados_guatemala');
+  abrirLink(url: string, nombre: string = 'link_consulado_guatemala') {
+    if (!url) {
+      return;
+    }
+
+    void this.analytics.enlace(nombre, url, 'consulados_guatemala');
+    window.open(url, '_blank');
+  }
+
+  abrirConsulado(item: any) {
+    const url = this.obtenerEnlace(item);
+
+    if (!url) {
+      return;
+    }
+
+    void this.analytics.enlace(
+      'ficha_minex_consulado_guatemala',
+      url,
+      'consulados_guatemala'
+    );
+
     window.open(url, '_blank');
   }
 
@@ -275,6 +305,10 @@ export class ConsuladosGuatemalaPage {
     return item.mapa || item.maps || item.google_maps || item.ubicacion || item.ubicación || '';
   }
 
+  obtenerEnlace(item: any): string {
+    return item.enlace || item.link || item.url || item.informacion || '';
+  }
+
   obtenerEncabezado(item: any): string {
     const pais = this.obtenerPais(item);
     const ciudad = this.obtenerCiudad(item);
@@ -290,62 +324,77 @@ export class ConsuladosGuatemalaPage {
     const nombre = this.normalizar(pais || '');
 
     const codigos: Record<string, string> = {
-      'belice': 'bz',
-      'belize': 'bz',
+      'alemania': 'de',
+      'armenia': 'am',
+      'australia': 'au',
+      'austria': 'at',
+      'bangladesh': 'bd',
+      'belarus': 'by',
+      'belarús': 'by',
+      'belgica': 'be',
+      'bélgica': 'be',
+      'bolivia': 'bo',
+      'bolivia estado plurinacional de bolivia': 'bo',
+      'brasil': 'br',
+      'bulgaria': 'bg',
       'canada': 'ca',
       'canadá': 'ca',
+      'chile': 'cl',
+      'chipre': 'cy',
+      'colombia': 'co',
+      'ecuador': 'ec',
+      'espana': 'es',
+      'españa': 'es',
       'estados unidos': 'us',
       'estados unidos de america': 'us',
       'estados unidos de américa': 'us',
-      'honduras': 'hn',
-      'marruecos': 'ma',
-      'mexico': 'mx',
-      'méxico': 'mx',
-
-      'alemania': 'de',
-      'argentina': 'ar',
-      'aruba': 'aw',
-      'australia': 'au',
-      'austria': 'at',
-      'azerbaiyan': 'az',
-      'azerbaijan': 'az',
-      'bolivia': 'bo',
-      'brasil': 'br',
-      'brazil': 'br',
-      'chile': 'cl',
-      'china': 'cn',
-      'colombia': 'co',
-      'costa rica': 'cr',
-      'cuba': 'cu',
-      'ecuador': 'ec',
-      'egipto': 'eg',
-      'el salvador': 'sv',
-      'espana': 'es',
-      'españa': 'es',
+      'estados unidos mexicanos': 'mx',
+      'estonia': 'ee',
+      'finlandia': 'fi',
       'francia': 'fr',
-      'guatemala': 'gt',
+      'georgia': 'ge',
+      'grecia': 'gr',
       'haiti': 'ht',
+      'haití': 'ht',
+      'hungria': 'hu',
+      'hungría': 'hu',
       'india': 'in',
+      'irlanda': 'ie',
       'israel': 'il',
       'italia': 'it',
       'jamaica': 'jm',
       'japon': 'jp',
       'japón': 'jp',
-      'nicaragua': 'ni',
-      'paises bajos': 'nl',
-      'países bajos': 'nl',
-      'panama': 'pa',
-      'panamá': 'pa',
+      'letonia': 'lv',
+      'libano': 'lb',
+      'líbano': 'lb',
+      'lituania': 'lt',
+      'malasia': 'my',
+      'marruecos': 'ma',
+      'mexico': 'mx',
+      'méxico': 'mx',
       'paraguay': 'py',
       'peru': 'pe',
       'perú': 'pe',
+      'polonia': 'pl',
       'portugal': 'pt',
       'reino unido': 'gb',
-      'republica dominicana': 'do',
-      'república dominicana': 'do',
-      'suiza': 'ch',
-      'uruguay': 'uy',
+      'reino unido de gran bretaña e irlanda del norte': 'gb',
+      'republica de corea': 'kr',
+      'república de corea': 'kr',
+      'rumania': 'ro',
+      'rusia': 'ru',
+      'singapur': 'sg',
+      'sri lanka': 'lk',
+      'sudafrica': 'za',
+      'sudáfrica': 'za',
+      'suecia': 'se',
+      'turkiye': 'tr',
+      'türkiye': 'tr',
+      'ucrania': 'ua',
       'venezuela': 've',
+      'venezuela republica bolivariana de venezuela': 've',
+      'venezuela república bolivariana de venezuela': 've',
     };
 
     return codigos[nombre] || '';
@@ -382,6 +431,8 @@ export class ConsuladosGuatemalaPage {
       .toLowerCase()
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[()]/g, '')
+      .replace(/\s+/g, ' ')
       .trim();
   }
 }

@@ -2,13 +2,21 @@
   <main class="consulados-screen">
 
     <header class="topbar">
-      <button class="back-btn" routerLink="/viajas-extranjero">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/viajas-extranjero"
+        (click)="registrarAccion('volver_viajas_extranjero', 'viajas_extranjero')">
         ‹
       </button>
 
       <h1>{{ t.titulo }}</h1>
 
-      <button class="sos-btn" routerLink="/denuncia">
+      <button
+        type="button"
+        class="sos-btn"
+        routerLink="/denuncia"
+        (click)="registrarAccion('sos_denuncia', 'denuncia')">
         {{ t.sos }}
       </button>
     </header>
@@ -16,11 +24,17 @@
     <section class="content">
 
       <div class="lang-switch">
-        <button [class.active]="lang === 'es'" (click)="setLang('es')">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
           ES
         </button>
 
-        <button [class.active]="lang === 'en'" (click)="setLang('en')">
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
           EN
         </button>
       </div>
@@ -91,7 +105,11 @@
 
           <div class="country-info">
             <h3>{{ item.pais }}</h3>
-            <p>{{ t.verConsulados }}</p>
+            <p>
+              {{ item.cantidad }}
+              {{ item.cantidad === 1 ? t.consuladoSingular : t.consuladosPlural }}
+            </p>
+            <small>{{ t.verConsulados }}</small>
           </div>
 
           <div class="arrow">
@@ -122,7 +140,10 @@
           </div>
 
           <div>
-            <span>{{ t.verConsulados }}</span>
+            <span>
+              {{ consuladosFiltrados.length }}
+              {{ consuladosFiltrados.length === 1 ? t.consuladoSingular : t.consuladosPlural }}
+            </span>
             <h3>{{ paisSeleccionado }}</h3>
           </div>
         </section>
@@ -140,6 +161,11 @@
               <span>{{ obtenerEncabezado(item) }}</span>
               <h3>{{ obtenerNombre(item) }}</h3>
             </div>
+          </div>
+
+          <div class="data-box official-box" *ngIf="obtenerEnlace(item) as enlace">
+            <strong>{{ t.fuenteTitulo }}</strong>
+            <p>{{ t.fuenteTexto }}</p>
           </div>
 
           <div class="data-box" *ngIf="obtenerDireccion(item) as direccion">
@@ -168,10 +194,19 @@
           </div>
 
           <button
-            *ngIf="obtenerMapa(item)"
-            class="map-btn"
+            *ngIf="obtenerEnlace(item)"
+            class="map-btn minex-btn"
             type="button"
-            (click)="abrirLink(obtenerMapa(item))"
+            (click)="abrirConsulado(item)"
+          >
+            {{ t.fichaMinex }}
+          </button>
+
+          <button
+            *ngIf="obtenerMapa(item)"
+            class="map-btn secondary-map-btn"
+            type="button"
+            (click)="abrirLink(obtenerMapa(item), 'mapa_consulado')"
           >
             {{ t.mapa }}
           </button>
@@ -191,7 +226,7 @@
 
         <button
           type="button"
-          (click)="abrirLink('https://www.minex.gob.gt/Directorio.aspx')"
+          (click)="abrirLink('https://www.minex.gob.gt/gt_exterior/B3', 'directorio_minex')"
         >
           {{ t.fuenteBoton }}
         </button>
@@ -200,27 +235,43 @@
     </section>
 
     <nav class="bottom-nav">
-      <button routerLink="/inicio">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
         <b>⌂</b>
         <span>{{ t.inicio }}</span>
       </button>
 
-      <button routerLink="/denuncia">
+      <button
+        type="button"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
         <b>!</b>
         <span>{{ t.denuncia }}</span>
       </button>
 
-      <button class="active" routerLink="/informacion">
+      <button
+        type="button"
+        class="active"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
         <b>i</b>
         <span>{{ t.info }}</span>
       </button>
 
-      <button routerLink="/apoyo">
+      <button
+        type="button"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
         <b>●</b>
         <span>{{ t.apoyo }}</span>
       </button>
 
-      <button routerLink="/privacidad">
+      <button
+        type="button"
+        routerLink="/privacidad"
+        (click)="registrarAccion('nav_privacidad', 'privacidad')">
         <b>?</b>
         <span>{{ t.acerca }}</span>
       </button>
