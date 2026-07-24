@@ -63,7 +63,7 @@ ion-content {
 
 /* Contenido */
 .content {
-  padding: 18px 17px 18px;
+  padding: 18px 17px 112px;
 }
 
 /* Idioma */
@@ -1227,3 +1227,353 @@ ion-content {
     font-size: 13px;
   }
 }
+
+/* Carrusel de temas: contador 1/5 y flechas */
+.topic-helper-row {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.topic-counter {
+  min-width: 58px;
+  height: 34px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0a3d91, #1e88e5);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 950;
+  box-shadow: 0 10px 18px rgba(10, 61, 145, 0.18);
+}
+
+.topic-helper-text {
+  color: #607083;
+  font-size: 12.5px;
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: right;
+}
+
+.topic-slider-wrap {
+  position: relative;
+  margin-top: 12px;
+}
+
+.topic-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 8;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0a3d91, #1e88e5);
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 22px rgba(10, 61, 145, 0.22);
+}
+
+.topic-arrow-left {
+  left: -8px;
+}
+
+.topic-arrow-right {
+  right: -8px;
+}
+
+.topic-arrow:disabled {
+  opacity: 0.35;
+  filter: grayscale(0.25);
+}
+
+.topic-step {
+  min-width: 52px;
+  height: 32px;
+  font-size: 12px;
+  letter-spacing: 0;
+  background: #eaf3ff;
+  color: #0a3d91;
+  border: 1px solid #cfe4f7;
+  box-shadow: 0 8px 14px rgba(20, 50, 90, 0.06);
+}
+
+@media (max-width: 360px) {
+  .topic-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 30px;
+  }
+
+  .topic-arrow-left {
+    left: -6px;
+  }
+
+  .topic-arrow-right {
+    right: -6px;
+  }
+
+  .topic-helper-text {
+    font-size: 11.5px;
+  }
+}
+
+/* AJUSTE FINAL LETRA MÁS GRANDE ZONA JOVEN */
+
+/* Hero principal */
+.hero-card h2 {
+  font-size: 32px !important;
+  line-height: 1.08 !important;
+}
+
+.hero-card p {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  font-weight: 850 !important;
+}
+
+.hero-tag {
+  font-size: 12px !important;
+}
+
+/* Títulos generales */
+.section-head h3 {
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+}
+
+.simulator-intro,
+.topics-subtitle,
+.quiz-intro {
+  font-size: 15.5px !important;
+  line-height: 1.45 !important;
+  font-weight: 850 !important;
+}
+
+/* Mini simulador */
+.start-simulator h4 {
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+}
+
+.start-simulator p {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.start-simulator button,
+.continue-btn,
+.result-box button {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.bubble {
+  font-size: 14.5px !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+}
+
+.signal-box {
+  font-size: 14.5px !important;
+  line-height: 1.45 !important;
+}
+
+.options-box h4 {
+  font-size: 17px !important;
+}
+
+.options-box button {
+  font-size: 14.5px !important;
+  line-height: 1.45 !important;
+}
+
+.result-box p {
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+}
+
+/* Carrusel de temas */
+.topic-helper-text {
+  font-size: 13.5px !important;
+  line-height: 1.25 !important;
+}
+
+.topic-counter,
+.topic-step {
+  font-size: 13px !important;
+}
+
+.topic-card__body strong {
+  font-size: 20px !important;
+  line-height: 1.23 !important;
+}
+
+.topic-card__body p {
+  font-size: 15.3px !important;
+  line-height: 1.5 !important;
+  font-weight: 800 !important;
+}
+
+.topic-card__body li {
+  font-size: 15px !important;
+  line-height: 1.42 !important;
+  font-weight: 850 !important;
+}
+
+/* Mito o realidad / No es amor / Checklist */
+.extra-header small {
+  font-size: 11px !important;
+}
+
+.extra-header h3 {
+  font-size: 23px !important;
+  line-height: 1.15 !important;
+}
+
+.mito-question {
+  font-size: 16px !important;
+  line-height: 1.48 !important;
+}
+
+.mito-actions button {
+  font-size: 16px !important;
+}
+
+.mito-result strong {
+  font-size: 14.5px !important;
+}
+
+.mito-result p {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+.mito-result button {
+  font-size: 15px !important;
+}
+
+.love-title strong {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+}
+
+.love-item p {
+  font-size: 15px !important;
+  line-height: 1.48 !important;
+}
+
+.check-intro {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.check-item p {
+  font-size: 15px !important;
+  line-height: 1.42 !important;
+}
+
+.check-result strong {
+  font-size: 16px !important;
+}
+
+.check-result p {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.check-result button {
+  font-size: 15px !important;
+}
+
+/* Mini Quiz */
+.quiz-start button,
+.next-quiz-btn,
+.quiz-result button {
+  font-size: 15px !important;
+}
+
+.quiz-progress {
+  font-size: 12.5px !important;
+}
+
+.quiz-box h4 {
+  font-size: 18px !important;
+  line-height: 1.35 !important;
+}
+
+.quiz-options button {
+  font-size: 15px !important;
+  line-height: 1.42 !important;
+}
+
+.quiz-explanation {
+  font-size: 14.5px !important;
+  line-height: 1.45 !important;
+}
+
+.quiz-result h4 {
+  font-size: 22px !important;
+}
+
+.quiz-result p {
+  font-size: 15.2px !important;
+  line-height: 1.48 !important;
+}
+
+/* Responsive pequeño: mantener legible sin romper diseño */
+@media (max-width: 390px) {
+  .hero-card h2 {
+    font-size: 29px !important;
+  }
+
+  .hero-card p {
+    font-size: 15px !important;
+  }
+
+  .section-head h3 {
+    font-size: 19px !important;
+  }
+
+  .simulator-intro,
+  .topics-subtitle,
+  .quiz-intro {
+    font-size: 14.8px !important;
+  }
+
+  .topic-card__body strong {
+    font-size: 18px !important;
+  }
+
+  .topic-card__body p,
+  .topic-card__body li,
+  .check-item p,
+  .love-item p,
+  .mito-result p,
+  .quiz-options button {
+    font-size: 14.4px !important;
+  }
+
+  .extra-header h3 {
+    font-size: 21px !important;
+  }
+
+  .mito-question {
+    font-size: 15px !important;
+  }
+
+  .quiz-box h4 {
+    font-size: 17px !important;
+  }
+}
+

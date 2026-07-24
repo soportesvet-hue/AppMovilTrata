@@ -65,7 +65,7 @@ ion-content {
 
 /* Contenido */
 .content {
-  padding: 18px 17px 22px;
+  padding: 18px 17px 110px;
 }
 
 /* Selector idioma */
@@ -117,16 +117,16 @@ ion-content {
   h2 {
     margin: 6px 0 7px;
     color: #0a3d91;
-    font-size: 26px;
-    line-height: 1.05;
+    font-size: 29px;
+    line-height: 1.08;
     font-weight: 900;
   }
 
   p {
     margin: 0;
     color: #24496f;
-    font-size: 14px;
-    line-height: 1.35;
+    font-size: 15.5px;
+    line-height: 1.45;
     font-weight: 800;
   }
 }
@@ -137,7 +137,7 @@ ion-content {
   border-radius: 999px;
   background: #fff4cc;
   color: #9b6500;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
 }
 
@@ -175,8 +175,8 @@ ion-content {
   h3 {
     margin: 0;
     color: #08244f;
-    font-size: 17px;
-    line-height: 1.2;
+    font-size: 19px;
+    line-height: 1.22;
     font-weight: 900;
   }
 }
@@ -214,8 +214,8 @@ ion-content {
 .remember-card p {
   margin: 0;
   color: #24496f;
-  font-size: 13.7px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.55;
   font-weight: 800;
 }
 
@@ -282,8 +282,8 @@ ion-content {
 .enhanced-title h3 {
   margin: 0;
   color: #0a3d91;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.22;
   font-weight: 900;
 }
 
@@ -305,8 +305,8 @@ ion-content {
 .info-text-box p {
   margin: 0;
   color: #17345d;
-  font-size: 14px;
-  line-height: 1.58;
+  font-size: 15.3px;
+  line-height: 1.62;
   font-weight: 800;
 }
 
@@ -360,8 +360,8 @@ ion-content {
   z-index: 2;
   margin: 4px 0 14px !important;
   color: #0a3d91 !important;
-  font-size: 14px !important;
-  line-height: 1.35 !important;
+  font-size: 15.2px !important;
+  line-height: 1.45 !important;
   font-weight: 900 !important;
 }
 
@@ -404,8 +404,8 @@ ion-content {
 
 .method-text {
   color: #08244f;
-  font-size: 13.4px;
-  line-height: 1.25;
+  font-size: 14.5px;
+  line-height: 1.35;
   font-weight: 900;
 }
 
@@ -440,8 +440,8 @@ ion-content {
 .method-note p {
   margin: 0;
   color: #0a3d91;
-  font-size: 13px;
-  line-height: 1.35;
+  font-size: 14px;
+  line-height: 1.45;
   font-weight: 900;
 }
 
@@ -456,8 +456,8 @@ ion-content {
     display: block;
     margin-bottom: 10px;
     color: #0a3d91;
-    font-size: 15px;
-    line-height: 1.35;
+    font-size: 16px;
+    line-height: 1.42;
     font-weight: 900;
   }
 
@@ -674,18 +674,18 @@ ion-content {
 /* Responsive */
 @media (max-width: 390px) {
   .content {
-    padding: 16px 14px 22px;
+    padding: 16px 14px 110px;
   }
 
   .hero-card {
     padding: 16px;
 
     h2 {
-      font-size: 23px;
+      font-size: 25px;
     }
 
     p {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
@@ -697,7 +697,7 @@ ion-content {
   }
 
   .section-title h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .info-card,
@@ -707,7 +707,7 @@ ion-content {
   }
 
   .enhanced-title h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .info-text-box {
@@ -715,8 +715,8 @@ ion-content {
   }
 
   .info-text-box p {
-    font-size: 13.2px;
-    line-height: 1.55;
+    font-size: 14.3px;
+    line-height: 1.6;
   }
 
   .method-item {
@@ -734,7 +734,7 @@ ion-content {
   }
 
   .method-text {
-    font-size: 12.8px;
+    font-size: 13.8px;
   }
 
   .method-note {
@@ -749,7 +749,7 @@ ion-content {
   }
 
   .method-note p {
-    font-size: 12.6px;
+    font-size: 13.5px;
   }
 
   .videos-bottom-card {

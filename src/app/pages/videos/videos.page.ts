@@ -64,8 +64,8 @@ export class VideosPage {
     this.videos = [
       {
         titulo: {
-          es: 'Video 1',
-          en: 'Video 1',
+          es: 'TDP trabajo forzado corto',
+          en: 'TDP Forced Labor Short Video',
         },
         descripcion: {
           es: 'Material audiovisual de prevención para reconocer señales de alerta.',
@@ -78,8 +78,8 @@ export class VideosPage {
       },
       {
         titulo: {
-          es: 'Video 2',
-          en: 'Video 2',
+          es: 'Beggar Girl Sub Español',
+          en: 'Beggar Girl Spanish Subtitles',
         },
         descripcion: {
           es: 'Video informativo para fortalecer la prevención de la trata de personas.',
@@ -92,12 +92,26 @@ export class VideosPage {
       },
       {
         titulo: {
-          es: 'Video 3',
-          en: 'Video 3',
+          es: 'Video informativo de prevención',
+          en: 'Prevention Informational Video',
         },
         descripcion: {
           es: 'Material audiovisual informativo para fortalecer la prevención y reconocer situaciones de riesgo.',
           en: 'Informational audiovisual material to strengthen prevention and recognize risky situations.',
+        },
+        youtubeUrl: 'https://www.youtube.com/watch?v=W_rROQxQqMk',
+        embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
+          'https://www.youtube.com/embed/W_rROQxQqMk'
+        ),
+      },
+      {
+        titulo: {
+          es: 'Material audiovisual informativo',
+          en: 'Informational Audiovisual Material',
+        },
+        descripcion: {
+          es: 'Video de apoyo para ampliar información preventiva y reconocer posibles señales de alerta.',
+          en: 'Support video to expand prevention information and recognize possible warning signs.',
         },
         youtubeUrl: 'https://www.youtube.com/watch?v=qqs7rEOVI1k',
         embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
@@ -121,6 +135,7 @@ export class VideosPage {
       info: 'Info',
       apoyo: 'Apoyo',
     },
+
     en: {
       titulo: 'Videos',
       subtitulo: 'Audiovisual material to learn and recognize warning signs.',

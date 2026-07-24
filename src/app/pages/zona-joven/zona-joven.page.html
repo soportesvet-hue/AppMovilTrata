@@ -125,38 +125,68 @@
           {{ t.temasSubtitulo }}
         </p>
 
-        <div
-          #topicScroller
-          class="topic-list"
-          (scroll)="onTopicScroll(topicScroller)">
-          <article
-            class="topic-card"
-            *ngFor="let tema of t.temas; let i = index"
-            [ngClass]="'topic-card--' + tema.color">
-            <div class="topic-card__head">
-              <span class="topic-icon topic-card__icon" [class]="tema.color">
-                <ion-icon [name]="resolveTopicIcon(tema.icon)"></ion-icon>
-              </span>
+        <div class="topic-helper-row">
+          <span class="topic-counter">
+            {{ activeTopicIndex + 1 }}/{{ t.temas.length }}
+          </span>
 
-              <span class="topic-step">
-                0{{ i + 1 }}
-              </span>
-            </div>
+          <span class="topic-helper-text">
+            {{ idioma.isEs() ? 'Desliza o usa las flechas' : 'Swipe or use the arrows' }}
+          </span>
+        </div>
 
-            <div class="topic-card__body">
-              <strong>{{ tema.titulo }}</strong>
+        <div class="topic-slider-wrap">
+          <button
+            type="button"
+            class="topic-arrow topic-arrow-left"
+            [disabled]="activeTopicIndex === 0"
+            (click)="goToTopic(topicScroller, activeTopicIndex - 1)"
+            [attr.aria-label]="idioma.isEs() ? 'Tema anterior' : 'Previous topic'">
+            ‹
+          </button>
 
-              <p *ngIf="tema.texto">
-                {{ tema.texto }}
-              </p>
+          <div
+            #topicScroller
+            class="topic-list"
+            (scroll)="onTopicScroll(topicScroller)">
+            <article
+              class="topic-card"
+              *ngFor="let tema of t.temas; let i = index"
+              [ngClass]="'topic-card--' + tema.color">
+              <div class="topic-card__head">
+                <span class="topic-icon topic-card__icon" [class]="tema.color">
+                  <ion-icon [name]="resolveTopicIcon(tema.icon)"></ion-icon>
+                </span>
 
-              <ul *ngIf="tema.items">
-                <li *ngFor="let item of tema.items">
-                  {{ item }}
-                </li>
-              </ul>
-            </div>
-          </article>
+                <span class="topic-step">
+                  {{ i + 1 }}/{{ t.temas.length }}
+                </span>
+              </div>
+
+              <div class="topic-card__body">
+                <strong>{{ tema.titulo }}</strong>
+
+                <p *ngIf="tema.texto">
+                  {{ tema.texto }}
+                </p>
+
+                <ul *ngIf="tema.items">
+                  <li *ngFor="let item of tema.items">
+                    {{ item }}
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <button
+            type="button"
+            class="topic-arrow topic-arrow-right"
+            [disabled]="activeTopicIndex === t.temas.length - 1"
+            (click)="goToTopic(topicScroller, activeTopicIndex + 1)"
+            [attr.aria-label]="idioma.isEs() ? 'Siguiente tema' : 'Next topic'">
+            ›
+          </button>
         </div>
 
         <div class="topic-indicators">

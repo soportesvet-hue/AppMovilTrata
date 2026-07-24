@@ -2,6 +2,21 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { IonContent, IonIcon } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import {
+  chevronBack,
+  sparkles,
+  chatbubbleEllipses,
+  book,
+  home,
+  alertCircle,
+  helpCircle,
+  gameController,
+  globe,
+  bulb,
+  person,
+  checkmark
+} from 'ionicons/icons';
 import { IdiomaService, Lang } from '../../services/idioma';
 import { AnalyticsService } from '../../services/analytics.service';
 
@@ -77,7 +92,22 @@ export class ZonaJovenPage {
   constructor(
     public idioma: IdiomaService,
     private analytics: AnalyticsService
-  ) {}
+  ) {
+    addIcons({
+      chevronBack,
+      sparkles,
+      chatbubbleEllipses,
+      book,
+      home,
+      alertCircle,
+      helpCircle,
+      gameController,
+      globe,
+      bulb,
+      person,
+      checkmark
+    });
+  }
 
   simuladorIniciado = false;
   pasoSimulador = 0;
@@ -231,7 +261,7 @@ export class ZonaJovenPage {
           id: 'ofertas',
           icon: 'bulb',
           color: 'yellow',
-          titulo: '¡Piénsalo dos veces!',
+          titulo: 'Primero verifica',
           texto:
             'Una oferta que parece demasiado buena puede ocultar un caso de trata de personas.',
           items: [
@@ -277,7 +307,7 @@ export class ZonaJovenPage {
           items: [
             'Deja de compartir información personal.',
             'Toma capturas de pantalla de conversaciones sospechosas.',
-            'Busca ayuda de una persona adulta de confianza para reportar la cuenta con las autoridades.',
+            'Busca ayuda de una persona adulta de confianza y reportalo a las autoridades.',
           ],
         },
       ],
@@ -407,7 +437,7 @@ export class ZonaJovenPage {
           id: 'ofertas',
           icon: 'bulb',
           color: 'yellow',
-          titulo: 'Think twice!',
+          titulo: 'Verify first',
           texto:
             'An offer that seems too good to be true may be hiding a case of human trafficking.',
           items: [
@@ -453,7 +483,7 @@ export class ZonaJovenPage {
           items: [
             'Stop sharing personal information.',
             'Take screenshots of suspicious conversations.',
-            'Get help from a trusted adult to report the account to the authorities.',
+            'Ask a trusted adult for help and report it to the authorities.',
           ],
         },
       ],
@@ -699,23 +729,24 @@ export class ZonaJovenPage {
   }
 
   goToTopic(container: HTMLElement, index: number) {
-    void this.analytics.accion('seleccionar_tema_zona_joven', 'zona_joven', `tema_${index + 1}`);
-
     const cards = Array.from(
       container.querySelectorAll<HTMLElement>('.topic-card')
     );
-    const target = cards[index];
 
-    if (!target) {
+    if (!cards.length) {
       return;
     }
 
+    const safeIndex = Math.max(0, Math.min(index, cards.length - 1));
+    const selectedCard = cards[safeIndex];
+
     container.scrollTo({
-      left: target.offsetLeft,
-      behavior: 'smooth',
+      left: selectedCard.offsetLeft,
+      behavior: 'smooth'
     });
 
-    this.activeTopicIndex = index;
+    this.activeTopicIndex = safeIndex;
+    void this.analytics.accion('seleccionar_tema_zona_joven', 'zona_joven', `tema_${safeIndex + 1}`);
   }
 
   get lang(): Lang {

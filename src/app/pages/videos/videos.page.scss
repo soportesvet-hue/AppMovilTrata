@@ -13,7 +13,7 @@ ion-content {
     linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
   color: #17345d;
   position: relative;
-  padding-bottom: 86px;
+  padding-bottom: 96px;
   overflow-x: hidden;
 }
 
@@ -63,7 +63,7 @@ ion-content {
 
 /* Contenido */
 .content {
-  padding: 18px 17px 18px;
+  padding: 18px 17px 110px;
 }
 
 /* Idioma */
@@ -122,8 +122,8 @@ ion-content {
   p {
     margin: 0;
     color: #24496f;
-    font-size: 14.5px;
-    line-height: 1.35;
+    font-size: 15px;
+    line-height: 1.45;
     font-weight: 800;
   }
 }
@@ -164,15 +164,15 @@ ion-content {
 
   strong {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 900;
     margin-bottom: 5px;
   }
 
   span {
     display: block;
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.45;
     font-weight: 800;
   }
 }
@@ -206,21 +206,21 @@ ion-content {
 }
 
 .video-info {
-  padding: 15px;
+  padding: 16px;
 
   h3 {
     margin: 0;
     color: #08244f;
-    font-size: 17px;
-    line-height: 1.2;
+    font-size: 20px;
+    line-height: 1.25;
     font-weight: 900;
   }
 
   p {
-    margin: 7px 0 13px;
+    margin: 8px 0 14px;
     color: #24496f;
-    font-size: 13.8px;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.45;
     font-weight: 800;
   }
 
@@ -228,10 +228,10 @@ ion-content {
     width: 100%;
     border: 0;
     border-radius: 18px;
-    padding: 13px;
+    padding: 14px;
     background: linear-gradient(135deg, #1e88e5, #26c6da);
     color: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 900;
   }
 }
@@ -251,6 +251,7 @@ ion-content {
   transform: translateX(-50%);
   bottom: 0;
   box-shadow: 0 -10px 28px rgba(20, 50, 90, 0.08);
+  z-index: 20;
 
   button {
     width: 25%;
@@ -273,12 +274,33 @@ ion-content {
   }
 }
 
+/* Responsive */
 @media (max-width: 360px) {
   .hero-card h2 {
     font-size: 26px;
   }
 
+  .hero-card p {
+    font-size: 14px;
+  }
+
   .video-info h3 {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .video-info p {
+    font-size: 14px;
+  }
+
+  .video-info button {
+    font-size: 14px;
+  }
+
+  .notice-card strong {
+    font-size: 14px;
+  }
+
+  .notice-card span {
+    font-size: 13px;
   }
 }
