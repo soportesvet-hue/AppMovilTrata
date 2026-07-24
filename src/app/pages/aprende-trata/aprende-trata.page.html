@@ -79,6 +79,54 @@
         </div>
       </section>
 
+      <!-- MODALIDADES O FINES DE LA TRATA DE PERSONAS -->
+      <section class="modalidades-card">
+        <div class="modalidades-header">
+          <span class="modalidades-main-icon">
+            <ion-icon name="layers"></ion-icon>
+          </span>
+
+          <div>
+            <small class="modalidades-label">
+              {{ t.modalidadesEtiqueta }}
+            </small>
+
+            <h3>
+              {{ t.modalidadesTitulo }}
+            </h3>
+          </div>
+        </div>
+
+        <p class="modalidades-intro">
+          {{ t.modalidadesIntro }}
+        </p>
+
+        <div class="modalidades-list">
+          <article
+            class="modalidad-item"
+            *ngFor="let modalidad of t.modalidades; let i = index"
+            [ngClass]="'modalidad-' + modalidad.color">
+
+            <div class="modalidad-img">
+              <span>{{ modalidad.icono }}</span>
+            </div>
+
+            <div class="modalidad-info">
+              <h4>{{ modalidad.titulo }}</h4>
+
+              <p>{{ modalidad.texto }}</p>
+            </div>
+          </article>
+        </div>
+
+        <button
+          type="button"
+          class="modalidades-btn"
+          (click)="abrirModalidadesTrata()">
+          {{ t.modalidadesBoton }}
+        </button>
+      </section>
+
       <!-- MÉTODOS DE CAPTACIÓN -->
       <section class="info-card methods-card">
         <div class="section-title methods-title">
