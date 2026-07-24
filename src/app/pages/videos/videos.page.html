@@ -1,24 +1,38 @@
 <ion-content [fullscreen]="true">
   <main class="videos-screen">
     <header class="topbar">
-      <button class="back-btn" routerLink="/informacion">
+      <button
+        type="button"
+        class="back-btn"
+        routerLink="/informacion"
+        (click)="registrarAccion('volver_informacion', 'informacion')">
         <ion-icon name="chevron-back"></ion-icon>
       </button>
 
       <h1>{{ t.titulo }}</h1>
 
-      <button class="sos-btn" routerLink="/denuncia">
+      <button
+        type="button"
+        class="sos-btn"
+        routerLink="/denuncia"
+        (click)="registrarAccion('sos_denuncia', 'denuncia')">
         SOS
       </button>
     </header>
 
     <section class="content">
       <div class="videos-lang-switch">
-        <button [class.active]="lang === 'es'" (click)="setLang('es')">
+        <button
+          type="button"
+          [class.active]="lang === 'es'"
+          (click)="setLang('es')">
           ES
         </button>
 
-        <button [class.active]="lang === 'en'" (click)="setLang('en')">
+        <button
+          type="button"
+          [class.active]="lang === 'en'"
+          (click)="setLang('en')">
           EN
         </button>
       </div>
@@ -43,7 +57,10 @@
       </section>
 
       <section class="video-list">
-        <article class="video-card" *ngFor="let video of videos">
+        <article
+          class="video-card"
+          *ngFor="let video of videos; let i = index">
+
           <div class="video-frame">
             <iframe
               [src]="video.embedUrl"
@@ -59,7 +76,9 @@
 
             <p>{{ video.descripcion[lang] }}</p>
 
-            <button (click)="abrirYoutube(video.youtubeUrl)">
+            <button
+              type="button"
+              (click)="abrirYoutube(video.youtubeUrl, i + 1)">
               {{ t.abrirYoutube }}
             </button>
           </div>
@@ -68,22 +87,35 @@
     </section>
 
     <nav class="bottom-nav">
-      <button routerLink="/inicio">
+      <button
+        type="button"
+        routerLink="/inicio"
+        (click)="registrarAccion('nav_inicio', 'inicio')">
         <b><ion-icon name="home"></ion-icon></b>
         {{ t.inicio }}
       </button>
 
-      <button routerLink="/denuncia">
+      <button
+        type="button"
+        routerLink="/denuncia"
+        (click)="registrarAccion('nav_denuncia', 'denuncia')">
         <b><ion-icon name="alert-circle"></ion-icon></b>
         {{ t.denunciaNav }}
       </button>
 
-      <button class="active" routerLink="/informacion">
+      <button
+        type="button"
+        class="active"
+        routerLink="/informacion"
+        (click)="registrarAccion('nav_informacion', 'informacion')">
         <b><ion-icon name="book"></ion-icon></b>
         {{ t.info }}
       </button>
 
-      <button routerLink="/apoyo">
+      <button
+        type="button"
+        routerLink="/apoyo"
+        (click)="registrarAccion('nav_apoyo', 'apoyo')">
         <b><ion-icon name="chatbubble-ellipses"></ion-icon></b>
         {{ t.apoyo }}
       </button>

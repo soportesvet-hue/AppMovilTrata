@@ -4,6 +4,16 @@ import { RouterLink } from '@angular/router';
 import { IonContent, IonIcon } from '@ionic/angular/standalone';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+import { addIcons } from 'ionicons';
+import {
+  chevronBack,
+  playCircle,
+  home,
+  alertCircle,
+  book,
+  chatbubbleEllipses
+} from 'ionicons/icons';
+
 import { IdiomaService, Lang } from '../../services/idioma';
 import { AnalyticsService } from '../../services/analytics.service';
 
@@ -42,6 +52,15 @@ export class VideosPage {
     private sanitizer: DomSanitizer,
     private analytics: AnalyticsService
   ) {
+    addIcons({
+      chevronBack,
+      playCircle,
+      home,
+      alertCircle,
+      book,
+      chatbubbleEllipses
+    });
+
     this.videos = [
       {
         titulo: {
@@ -59,8 +78,8 @@ export class VideosPage {
       },
       {
         titulo: {
-          es: 'Video corto 2',
-          en: 'Short video 2',
+          es: 'Video 2',
+          en: 'Video 2',
         },
         descripcion: {
           es: 'Video informativo para fortalecer la prevención de la trata de personas.',
@@ -69,6 +88,20 @@ export class VideosPage {
         youtubeUrl: 'https://www.youtube.com/watch?v=wNQSPvwODkc',
         embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
           'https://www.youtube.com/embed/wNQSPvwODkc'
+        ),
+      },
+      {
+        titulo: {
+          es: 'Video 3',
+          en: 'Video 3',
+        },
+        descripcion: {
+          es: 'Material audiovisual informativo para fortalecer la prevención y reconocer situaciones de riesgo.',
+          en: 'Informational audiovisual material to strengthen prevention and recognize risky situations.',
+        },
+        youtubeUrl: 'https://www.youtube.com/watch?v=qqs7rEOVI1k',
+        embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
+          'https://www.youtube.com/embed/qqs7rEOVI1k'
         ),
       },
     ];
@@ -121,10 +154,11 @@ export class VideosPage {
   }
 
   get lang(): Lang {
-    return this.idioma.getLang();
+    return this.idioma.getLang() as Lang;
   }
 
   get t(): VideosTextos {
-    return this.textos[this.idioma.getLang()];
+    const lang = this.idioma.getLang() as Lang;
+    return this.textos[lang];
   }
 }

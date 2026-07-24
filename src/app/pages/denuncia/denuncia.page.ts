@@ -62,16 +62,16 @@ export class DenunciaPage implements OnInit {
       salir: 'Salir',
       etiqueta: 'Denuncia',
       subtitulo:
-        'Si estás en Guatemala y necesitas contactar a las autoridades o instituciones de apoyo, aquí encontrarás canales oficiales para solicitar ayuda, orientación o realizar una denuncia de forma confidencial.',
+        'Si estás en Guatemala y necesitas contactar a las autoridades o instituciones de apoyo, aquí encontrarás canales oficiales para solicitar ayuda, orientación o realizar una denuncia de forma anónima.',
 
       pncEtiqueta: 'EMERGENCIA',
-      pncNumero: 'tel: 110',
+      pncNumero: 'Teléfono: 110',
       pncTitulo: 'Policía Nacional Civil',
       pncTexto: 'Centro de llamadas de Emergencia.',
       pncBoton: 'Llamar 110',
 
       crimeEtiqueta: 'DENUNCIA ANÓNIMA',
-      crimeNumero: 'tel: 1561',
+      crimeNumero: 'Teléfono: 1561',
       crimeTitulo: 'Crime Stoppers',
       crimeTexto:
         'Canal para realizar denuncias confidenciales y anónimas por llamada, WhatsApp o formulario web.',
@@ -83,13 +83,13 @@ export class DenunciaPage implements OnInit {
       crimeBotonWebSub: 'Formulario seguro para denunciar',
 
       pgnEtiqueta: 'NIÑEZ',
-      pgnNumero: 'tel: 1584',
+      pgnNumero: 'Teléfono: 1584',
       pgnTitulo: 'Denuncias a favor de niñez y adolescencia',
       pgnSubtexto:
         'Informa vulneración de derechos de niñez y adolescencia.',
       pgnBotonTelefono: 'PGN – Denuncia telefónica',
       pgnBotonWeb: 'PGN – Denuncia portal web',
-      pgnBotonDirectorio: 'Conoce el directorio PGN',
+      pgnBotonDirectorio: 'Conoce el Directorio PGN',
 
       inicio: 'Inicio',
       denunciaNav: 'Denuncia',
@@ -102,16 +102,16 @@ export class DenunciaPage implements OnInit {
       salir: 'Exit',
       etiqueta: 'Report',
       subtitulo:
-        'If you are in Guatemala and need to contact authorities or support institutions, here you will find official channels to request help, guidance, or submit a confidential report.',
+        'If you are in Guatemala and need to contact authorities or support institutions, you will find official channels here to request help, guidance, or submit an anonymous report.',
 
       pncEtiqueta: 'EMERGENCY',
-      pncNumero: 'tel: 110',
+      pncNumero: 'Phone: 110',
       pncTitulo: 'National Civil Police',
       pncTexto: 'Emergency call center.',
       pncBoton: 'Call 110',
 
       crimeEtiqueta: 'ANONYMOUS REPORT',
-      crimeNumero: 'tel: 1561',
+      crimeNumero: 'Phone: 1561',
       crimeTitulo: 'Crime Stoppers',
       crimeTexto:
         'Channel for confidential and anonymous reports by phone, WhatsApp or web form.',
@@ -123,13 +123,13 @@ export class DenunciaPage implements OnInit {
       crimeBotonWebSub: 'Secure form to report',
 
       pgnEtiqueta: 'CHILDREN',
-      pgnNumero: 'tel: 1584',
+      pgnNumero: 'Phone: 1584',
       pgnTitulo: 'Reports for children and adolescents',
       pgnSubtexto:
         'Report violations of the rights of children and adolescents.',
       pgnBotonTelefono: 'PGN – Phone report',
       pgnBotonWeb: 'PGN – Web report',
-      pgnBotonDirectorio: 'View PGN directory',
+      pgnBotonDirectorio: 'View PGN Directory',
 
       inicio: 'Home',
       denunciaNav: 'Report',

@@ -42,7 +42,7 @@ export class InicioPage implements OnInit {
     es: {
       appNombre: 'Contigo',
       appGt: 'GT',
-      lema: 'Ayuda y orientación segura, rápida y discreta.',
+      lema: 'Ayuda y orientación segura y efectiva.',
 
       ayuda: 'Ayuda inmediata',
       ayudaEtiqueta: 'ACCESO SEGURO',
@@ -60,7 +60,7 @@ export class InicioPage implements OnInit {
     en: {
       appNombre: 'Contigo',
       appGt: 'GT',
-      lema: 'Safe, fast and discreet help and guidance.',
+      lema: 'Safe and effective support and guidance.',
 
       ayuda: 'Immediate help',
       ayudaEtiqueta: 'SAFE ACCESS',
