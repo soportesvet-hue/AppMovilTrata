@@ -33,15 +33,15 @@ export class InicioPage implements OnInit {
   mostrarSplash = !InicioPage.splashYaMostrado;
 
   constructor(
-  public idioma: IdiomaService,
-  private router: Router,
-  private analytics: AnalyticsService
-) {}
+    public idioma: IdiomaService,
+    private router: Router,
+    private analytics: AnalyticsService
+  ) {}
 
   textos: Record<Lang, InicioTextos> = {
     es: {
-      appNombre: 'Contigo',
-      appGt: 'GT',
+      appNombre: 'Guia',
+      appGt: '2',
       lema: 'Ayuda y orientación segura y efectiva.',
 
       ayuda: 'Ayuda inmediata',
@@ -58,8 +58,8 @@ export class InicioPage implements OnInit {
     },
 
     en: {
-      appNombre: 'Contigo',
-      appGt: 'GT',
+      appNombre: 'Guia',
+      appGt: '2',
       lema: 'Safe and effective support and guidance.',
 
       ayuda: 'Immediate help',
@@ -78,6 +78,7 @@ export class InicioPage implements OnInit {
 
   ngOnInit() {
     void this.analytics.pantalla('inicio');
+
     if (!InicioPage.splashYaMostrado) {
       this.mostrarSplash = true;
       InicioPage.splashYaMostrado = true;
@@ -90,10 +91,10 @@ export class InicioPage implements OnInit {
     }
   }
 
- setLang(lang: Lang) {
-  this.idioma.setLang(lang);
-  void this.analytics.idioma(lang, 'inicio');
-}
+  setLang(lang: Lang) {
+    this.idioma.setLang(lang);
+    void this.analytics.idioma(lang, 'inicio');
+  }
 
   get lang(): Lang {
     return this.idioma.getLang();
@@ -104,12 +105,12 @@ export class InicioPage implements OnInit {
   }
 
   irDenuncia() {
-  void this.analytics.accion('ayuda_inmediata', 'inicio', 'denuncia');
-  this.router.navigate(['/denuncia']);
-}
+    void this.analytics.accion('ayuda_inmediata', 'inicio', 'denuncia');
+    this.router.navigate(['/denuncia']);
+  }
 
-irInformacion() {
-  void this.analytics.accion('informacion', 'inicio', 'informacion');
-  this.router.navigate(['/informacion']);
-}
+  irInformacion() {
+    void this.analytics.accion('informacion', 'inicio', 'informacion');
+    this.router.navigate(['/informacion']);
+  }
 }

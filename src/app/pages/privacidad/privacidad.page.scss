@@ -33,7 +33,8 @@ ion-content {
     flex: 1;
     margin: 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 19px;
+    line-height: 1.1;
     font-weight: 900;
   }
 }
@@ -111,14 +112,14 @@ ion-content {
     color: #7a6100;
     padding: 7px 12px;
     border-radius: 999px;
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 900;
   }
 
   h2 {
-    margin: 10px 0 7px;
+    margin: 10px 0 8px;
     color: #0d4ea6;
-    font-size: 28px;
+    font-size: 29px;
     line-height: 1.05;
     font-weight: 900;
   }
@@ -126,9 +127,9 @@ ion-content {
   p {
     margin: 0;
     color: #36506f;
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 700;
+    font-size: 15.5px;
+    line-height: 1.5;
+    font-weight: 800;
   }
 }
 
@@ -150,24 +151,25 @@ ion-content {
 .list-card {
   background: #ffffff;
   border-radius: 24px;
-  padding: 17px 18px;
+  padding: 18px 18px;
   margin-bottom: 14px;
   box-shadow: 0 10px 22px rgba(13, 78, 166, 0.07);
   border-left: 7px solid #41bceb;
 
   h3 {
-    margin: 0 0 8px;
+    margin: 0 0 9px;
     color: #0d4ea6;
-    font-size: 18px;
+    font-size: 19px;
+    line-height: 1.22;
     font-weight: 900;
   }
 
   p {
     margin: 0;
     color: #36506f;
-    font-size: 14px;
-    line-height: 1.45;
-    font-weight: 700;
+    font-size: 15.5px;
+    line-height: 1.52;
+    font-weight: 800;
   }
 }
 
@@ -186,8 +188,8 @@ ion-content {
 
   li {
     color: #36506f;
-    font-size: 14px;
-    line-height: 1.45;
+    font-size: 15px;
+    line-height: 1.55;
     font-weight: 800;
     margin-bottom: 6px;
   }
@@ -250,9 +252,47 @@ ion-content {
   font-weight: 900;
 }
 
+/* Ajuste general de lectura */
+.content h1,
+.privacy-screen h1,
+.privacidad-screen h1 {
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.content h2,
+.content h3,
+.hero-card h2,
+.info-card h3,
+.privacy-card h3,
+.list-card h3 {
+  font-weight: 900;
+}
+
+.content p,
+.hero-card p,
+.info-card p,
+.privacy-card p,
+.list-card p {
+  font-weight: 800;
+}
+
+.content li,
+.info-card li,
+.privacy-card li,
+.list-card li {
+  font-weight: 800;
+}
+
+/* Responsive */
 @media (max-width: 390px) {
+  .content {
+    padding: 14px 12px 26px;
+  }
+
   .hero-card {
     grid-template-columns: 1fr 62px;
+    padding: 17px;
   }
 
   .hero-icon {
@@ -262,12 +302,43 @@ ion-content {
   }
 
   .hero-card h2 {
-    font-size: 25px;
+    font-size: 26px;
+  }
+
+  .hero-card p {
+    font-size: 14.8px;
+    line-height: 1.48;
   }
 
   .info-card,
   .privacy-card,
   .list-card {
-    padding: 16px;
+    padding: 17px 16px;
+  }
+
+  .info-card h3,
+  .privacy-card h3,
+  .list-card h3 {
+    font-size: 18.5px;
+  }
+
+  .info-card p,
+  .privacy-card p,
+  .list-card p {
+    font-size: 14.8px;
+    line-height: 1.5;
+  }
+
+  .list-card li {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .bottom-nav button {
+    font-size: 10.5px;
+  }
+
+  .nav-icon {
+    font-size: 14px;
   }
 }

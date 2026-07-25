@@ -8,23 +8,28 @@
     <div class="dots-right"></div>
 
     <div class="lang-switch">
-      <button [class.active]="lang === 'es'" (click)="setLang('es')">
+      <button
+        type="button"
+        [class.active]="lang === 'es'"
+        (click)="setLang('es')">
         ES
       </button>
 
-      <button [class.active]="lang === 'en'" (click)="setLang('en')">
+      <button
+        type="button"
+        [class.active]="lang === 'en'"
+        (click)="setLang('en')">
         EN
       </button>
     </div>
 
     <section class="brand-section">
       <div class="logo-wrap">
-        <img src="assets/img/logo.png" alt="Contigo GT">
+        <img src="assets/img/logo.png" alt="Guia2">
       </div>
 
-      <h1>
-        {{ t.appNombre }}
-        <span>{{ t.appGt }}</span>
+      <h1 class="brand-title" aria-label="Guia2">
+        <span class="brand-word">{{ t.appNombre }}</span><span class="brand-number">{{ t.appGt }}</span>
       </h1>
 
       <div class="heart-line">
@@ -120,11 +125,10 @@
   <!-- Pantalla de carga inicial -->
   <section class="splash-screen" [hidden]="!mostrarSplash">
     <div class="splash-card">
-      <img src="assets/img/logo.png" alt="Contigo GT">
+      <img src="assets/img/logo.png" alt="Guia2">
 
-      <h1>
-        {{ t.appNombre }}
-        <span>{{ t.appGt }}</span>
+      <h1 class="splash-brand-title" aria-label="Guia2">
+        <span class="brand-word">{{ t.appNombre }}</span><span class="brand-number">{{ t.appGt }}</span>
       </h1>
 
       <p>{{ t.cargando }}</p>

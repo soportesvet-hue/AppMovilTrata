@@ -122,35 +122,120 @@
 }
 
 .logo-wrap {
-  width: 112px;
-  height: 112px;
+  width: 118px;
+  height: 118px;
   margin: 0 auto;
-  border-radius: 32px;
-  background: #ffffff;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.96)),
+    #ffffff;
   display: grid;
   place-items: center;
   padding: 12px;
-  box-shadow: 0 22px 34px rgba(0, 22, 80, 0.28);
+  position: relative;
+  z-index: 3;
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.10),
+    0 0 28px rgba(65, 188, 235, 0.56),
+    0 22px 36px rgba(0, 22, 80, 0.34);
+  animation: logoFloat 3.2s ease-in-out infinite;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 8px 12px rgba(0, 92, 190, 0.22));
   }
 }
 
-.brand-section h1 {
-  margin: 20px 0 0;
-  font-size: 43px;
-  line-height: 0.95;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+.logo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -13px;
+  border-radius: 44px;
+  background:
+    radial-gradient(circle, rgba(65, 188, 235, 0.36), transparent 68%);
+  z-index: -1;
+  filter: blur(4px);
+  animation: logoGlow 2.8s ease-in-out infinite;
+}
 
-  span {
-    color: #ffcf33;
-  }
+.logo-wrap::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 46px;
+  height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), transparent);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+
+.brand-title {
+  margin: 18px 0 0;
+  text-align: center;
+  font-size: clamp(48px, 15vw, 72px);
+  line-height: 0.88;
+  font-weight: 1000;
+  letter-spacing: -2.4px;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 10px 16px rgba(0, 25, 80, 0.38));
+}
+
+.brand-word {
+  display: inline-block;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #e4f6ff 45%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.20),
+    0 7px 0 rgba(0, 72, 170, 0.46),
+    0 13px 24px rgba(0, 31, 84, 0.48);
+}
+
+.brand-number {
+  display: inline-block;
+  margin-left: 6px;
+  color: #ffcf33;
+  background: linear-gradient(180deg, #fff6b8 0%, #ffcf33 45%, #ffad00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.23),
+    0 7px 0 rgba(164, 104, 0, 0.56),
+    0 13px 24px rgba(255, 207, 51, 0.48);
+  position: relative;
+}
+
+.brand-number::after {
+  content: "";
+  position: absolute;
+  inset: -10px -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 207, 51, 0.42), transparent 68%);
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.brand-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  margin: 17px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #41bceb, #ffcf33, #41bceb, transparent);
+  box-shadow: 0 0 18px rgba(65, 188, 235, 0.56);
 }
 
 .heart-line {
@@ -482,26 +567,39 @@
   animation: splashIn 0.7s ease both;
 
   img {
-    width: 126px;
-    height: 126px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
-    border-radius: 34px;
+    border-radius: 36px;
     background: #ffffff;
     padding: 12px;
-    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.24);
+    box-shadow:
+      0 0 0 6px rgba(255, 255, 255, 0.10),
+      0 0 30px rgba(65, 188, 235, 0.48),
+      0 22px 40px rgba(0, 0, 0, 0.24);
+    animation: logoFloat 3.2s ease-in-out infinite;
   }
 
-  h1 {
+  .splash-brand-title {
     margin: 22px 0 8px;
-    font-size: 2.55rem;
-    line-height: 0.95;
-    font-weight: 900;
+    font-size: 3.1rem;
+    line-height: 0.9;
+    font-weight: 1000;
+    letter-spacing: -1.8px;
     color: #ffffff;
+    filter: drop-shadow(0 12px 18px rgba(0, 25, 80, 0.36));
   }
 
-  h1 span {
-    display: block;
-    color: #ffcf33;
+  .splash-brand-title .brand-word,
+  .splash-brand-title .brand-number {
+    text-shadow:
+      0 2px 0 rgba(255, 255, 255, 0.20),
+      0 6px 0 rgba(0, 72, 170, 0.34),
+      0 12px 22px rgba(0, 31, 84, 0.42);
+  }
+
+  .splash-brand-title .brand-number {
+    margin-left: 5px;
   }
 
   p {
@@ -599,6 +697,31 @@
   }
 }
 
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-6px) scale(1.03);
+  }
+}
+
+@keyframes logoGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
 /* Responsive */
 @media (max-width: 390px) {
   .home-content {
@@ -610,17 +733,28 @@
   }
 
   .logo-wrap {
-    width: 104px;
-    height: 104px;
-    border-radius: 29px;
+    width: 108px;
+    height: 108px;
+    border-radius: 31px;
+  }
+
+  .logo-wrap::before {
+    border-radius: 40px;
+    inset: -11px;
   }
 
   .brand-section {
     margin-bottom: 30px;
   }
 
-  .brand-section h1 {
-    font-size: 38px;
+  .brand-title {
+    font-size: 48px;
+    letter-spacing: -1.9px;
+  }
+
+  .brand-title::after {
+    width: 126px;
+    margin-top: 14px;
   }
 
   .brand-section p {
@@ -704,5 +838,21 @@
     width: 42px;
     height: 42px;
     flex-basis: 42px;
+  }
+}
+
+
+@media (max-width: 340px) {
+  .brand-title {
+    font-size: 41px;
+    letter-spacing: -1.5px;
+  }
+
+  .brand-number {
+    margin-left: 4px;
+  }
+
+  .splash-card .splash-brand-title {
+    font-size: 2.65rem;
   }
 }

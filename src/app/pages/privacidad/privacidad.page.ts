@@ -46,19 +46,20 @@ export class PrivacidadPage {
     es: {
       titulo: 'Privacidad',
       etiqueta: 'INFORMACIÓN DE LA APP',
-      subtitulo: 'Conoce el propósito de esta aplicación y cómo protege tu información.',
+      subtitulo:
+        'Guia2 es una aplicación informativa y preventiva elaborada por la Secretaría contra la Violencia Sexual, Explotación y Trata de Personas -SVET-, para brindar orientación segura, discreta y confiable.',
 
       queEsTitulo: '¿Qué es esta app?',
       queEsTexto:
-        'Es una aplicación informativa y preventiva que brinda orientación básica sobre trata de personas, señales de alerta y canales de apoyo disponibles.',
+        'Es una aplicación informativa y preventiva que brinda orientación básica sobre trata de personas, señales de alerta y canales oficiales de apoyo y denuncia disponibles en Guatemala.',
 
       finalidadTitulo: '¿Para qué fue creada?',
       finalidadTexto:
-        'Fue creada para facilitar el acceso rápido a información segura, recursos de prevención y contactos de instituciones que pueden brindar orientación o apoyo.',
+        'Fue creada para facilitar el acceso rápido a información segura, recursos de orientación y contactos institucionales que pueden brindar apoyo en situaciones de riesgo. Su nombre discreto permite que la aplicación sea una herramienta segura y fácil de consultar.',
 
       privacidadTitulo: 'Tu privacidad',
       privacidadTexto:
-        'La aplicación no solicita datos personales, no guarda denuncias dentro del dispositivo y no sustituye los canales oficiales de atención o emergencia.',
+        'Guia2 no solicita datos personales, no guarda información dentro del dispositivo y no sustituye los canales oficiales de atención, emergencia o denuncia.',
 
       datosTitulo: 'Esta app no solicita:',
       datosItems: [
@@ -67,31 +68,33 @@ export class PrivacidadPage {
         'Dirección personal.',
         'Contraseñas.',
         'Información bancaria.',
+        'Fotografías o ubicación en tiempo real.',
       ],
 
       regresar: 'Regresar',
       inicio: 'Inicio',
       denuncia: 'Denuncia',
       info: 'Info',
-      apoyo: 'Consejo y asesoria',
+      apoyo: 'Consejo y asesoría',
     },
 
     en: {
       titulo: 'Privacy',
       etiqueta: 'APP INFORMATION',
-      subtitulo: 'Learn the purpose of this app and how it protects your information.',
+      subtitulo:
+        'Guia2 is an informational and preventive app developed by the Secretariat against Sexual Violence, Exploitation and Trafficking in Persons -SVET-, to provide safe, discreet and reliable guidance.',
 
       queEsTitulo: 'What is this app?',
       queEsTexto:
-        'Is an informational and prevention app that provides basic guidance about human trafficking, warning signs and available support channels.',
+        'It is an informational and preventive app that provides basic guidance about human trafficking, warning signs, and official support and reporting channels available in Guatemala.',
 
       finalidadTitulo: 'Why was it created?',
       finalidadTexto:
-        'It was created to provide quick access to safe information, prevention resources and contacts of institutions that can provide guidance or support.',
+        'It was created to provide quick access to safe information, guidance resources, and institutional contacts that can offer support in risk situations. Its discreet name allows the app to be a safe and easy-to-use guidance tool.',
 
       privacidadTitulo: 'Your privacy',
       privacidadTexto:
-        'The app does not request personal data, does not store reports on the device and does not replace official emergency or support channels.',
+        'Guia2 does not request personal data, does not store information on the device, and does not replace official support, emergency, or reporting channels.',
 
       datosTitulo: 'This app does not request:',
       datosItems: [
@@ -100,13 +103,14 @@ export class PrivacidadPage {
         'Personal address.',
         'Passwords.',
         'Banking information.',
+        'Photos or real-time location.',
       ],
 
       regresar: 'Back',
       inicio: 'Home',
       denuncia: 'Report',
       info: 'Info',
-      apoyo: 'Advice and counsel',
+      apoyo: 'Advice and guidance',
     },
   };
 
