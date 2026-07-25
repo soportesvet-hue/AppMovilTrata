@@ -51,7 +51,7 @@ export class PrivacidadPage {
 
       queEsTitulo: '¿Qué es esta app?',
       queEsTexto:
-        'Es una aplicación informativa y preventiva que brinda orientación básica sobre trata de personas, señales de alerta y canales oficiales de apoyo y denuncia disponibles en Guatemala.',
+        'Es una aplicación informativa y preventiva que brinda orientación básica sobre trata de personas, señales de alerta y canales de denuncia y consejería sobre trata de personas disponibles en Guatemala.',
 
       finalidadTitulo: '¿Para qué fue creada?',
       finalidadTexto:
@@ -86,7 +86,7 @@ export class PrivacidadPage {
 
       queEsTitulo: 'What is this app?',
       queEsTexto:
-        'It is an informational and preventive app that provides basic guidance about human trafficking, warning signs, and official support and reporting channels available in Guatemala.',
+        'It is an informational and preventive app that provides basic guidance about human trafficking, warning signs, and reporting and counseling channels on human trafficking available in Guatemala.',
 
       finalidadTitulo: 'Why was it created?',
       finalidadTexto:
