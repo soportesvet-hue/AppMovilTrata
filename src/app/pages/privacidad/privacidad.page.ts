@@ -47,7 +47,7 @@ export class PrivacidadPage {
       titulo: 'Privacidad',
       etiqueta: 'INFORMACIÓN DE LA APP',
       subtitulo:
-        'Guia2 es una aplicación informativa y preventiva elaborada por la Secretaría contra la Violencia Sexual, Explotación y Trata de Personas -SVET-, para brindar orientación segura, discreta y confiable.',
+        'Guiados es una aplicación informativa y preventiva elaborada por la Secretaría contra la Violencia Sexual, Explotación y Trata de Personas -SVET-, para brindar orientación segura, discreta y confiable.',
 
       queEsTitulo: '¿Qué es esta app?',
       queEsTexto:
@@ -59,7 +59,7 @@ export class PrivacidadPage {
 
       privacidadTitulo: 'Tu privacidad',
       privacidadTexto:
-        'Guia2 no solicita datos personales, no guarda información dentro del dispositivo y no sustituye los canales oficiales de atención, emergencia o denuncia.',
+        'Guiados no solicita datos personales, no guarda información dentro del dispositivo y no sustituye los canales oficiales de atención, emergencia o denuncia.',
 
       datosTitulo: 'Esta app no solicita:',
       datosItems: [
@@ -82,7 +82,7 @@ export class PrivacidadPage {
       titulo: 'Privacy',
       etiqueta: 'APP INFORMATION',
       subtitulo:
-        'Guia2 is an informational and preventive app developed by the Secretariat against Sexual Violence, Exploitation and Trafficking in Persons -SVET-, to provide safe, discreet and reliable guidance.',
+        'Guiados is an informational and preventive app developed by the Secretariat against Sexual Violence, Exploitation and Trafficking in Persons -SVET-, to provide safe, discreet and reliable guidance.',
 
       queEsTitulo: 'What is this app?',
       queEsTexto:
@@ -94,7 +94,7 @@ export class PrivacidadPage {
 
       privacidadTitulo: 'Your privacy',
       privacidadTexto:
-        'Guia2 does not request personal data, does not store information on the device, and does not replace official support, emergency, or reporting channels.',
+        'Guiados does not request personal data, does not store information on the device, and does not replace official support, emergency, or reporting channels.',
 
       datosTitulo: 'This app does not request:',
       datosItems: [

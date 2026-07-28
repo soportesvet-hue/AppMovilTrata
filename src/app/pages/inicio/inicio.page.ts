@@ -40,8 +40,8 @@ export class InicioPage implements OnInit {
 
   textos: Record<Lang, InicioTextos> = {
     es: {
-      appNombre: 'Guia',
-      appGt: '2',
+      appNombre: '',
+      appGt: 'Guiados',
       lema: 'Ayuda y orientación segura y efectiva.',
 
       ayuda: 'Ayuda inmediata',
